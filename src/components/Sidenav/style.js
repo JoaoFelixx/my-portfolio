@@ -42,3 +42,8 @@ export const CloseButton = styled.a`
     cursor: pointer;
   }
 `;
+
+export const PreferencesDiv = styled.div`
+  padding: 8px 8px 8px 32px;
+
+`;

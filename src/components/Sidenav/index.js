@@ -1,18 +1,25 @@
-import { Switch } from 'antd'
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { Switch } from 'antd'
 import { localizedStrings } from '../../constants'
-import { toggleSideNav } from '../../store/actions'
+import { 
+  toggleSideNav, 
+  toggleTheme,
+} from '../../store/actions'
 import {
   CloseButton,
   SideButtons,
-  StyledSidenav
+  StyledSidenav,
+  PreferencesDiv,
 } from './style'
 
 export const Sidenav = () => {
   const dispatch = useDispatch()
+
   const [style, setStyle] = useState({ width: '0' })
   const [closedTheSidenav,setClosedTheSidenav] = useState(false)
+  const [preferenceTheme,setPreferenceTheme] = useState('default')
+
   const {
     language,
     theme,
@@ -30,6 +37,21 @@ export const Sidenav = () => {
     dispatch(toggleSideNav(preferences))
     
     setClosedTheSidenav(true)
+  }
+
+  const changeTheme = () => {
+
+    const isDefaultOrDarkTheme = preferenceTheme === 'default' ? 'dark' : 'default';
+
+    const preferences = {
+      language,
+      theme: isDefaultOrDarkTheme,
+      sidenavIsOpen
+    } 
+
+    dispatch(toggleTheme(preferences))
+
+    setPreferenceTheme(isDefaultOrDarkTheme)
   }
 
   useEffect(() => {
@@ -51,7 +73,15 @@ export const Sidenav = () => {
       <SideButtons>{ localizedStrings[language].softSkills }</SideButtons>
       <SideButtons>{ localizedStrings[language].contact }   </SideButtons>
       <SideButtons href="https://felixfreelancer.netlify.app/">{ localizedStrings[language].wantAWebsite }</SideButtons>
-      <Switch defaultChecked />    
+      <PreferencesDiv>
+        <p style={{color: 'white'}}>localizedStrings[language].defineTheme</p>
+        <Switch 
+          style={{width: '70px'}}
+          checkedChildren={localizedStrings[language].default } 
+          unCheckedChildren={ localizedStrings[language].dark } 
+          onClick={() => changeTheme()}
+          defaultChecked />
+      </PreferencesDiv>
     </StyledSidenav>
   )
 }
