@@ -1,5 +1,5 @@
 const contact = {
-  mySocialNetwork: 'Minhas redes Sociais',
+  mySocialNetwork: 'My social networks',
 }
 
 export default contact

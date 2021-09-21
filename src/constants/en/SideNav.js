@@ -6,6 +6,9 @@ const sidenav = {
   projects: 'Projetos',
   softSkills: 'Soft Skills',
   contact: 'Contato',
+  default: 'Padrão',
+  dark: 'Escuro',
+  defineTheme: 'Defina o tema abaixo'
 }
 
 export default sidenav

@@ -8,18 +8,18 @@ export const reducer = (state = INITIAL_STATE, action) => {
 
   if (action.type === 'SET_THEME') return {
     ...state,
-    theme: action.theme
+    ...action.theme
   }
 
   if (action.type === 'SET_LANGUAGE') return {
     ...state,
-    language: action.language
+    ...action.language
   }
 
   if (action.type === 'SET_SIDENAV') return {
     ...state,
-    sidenavIsOpen: action.sidenavIsOpen
+    ...action.sidenavIsOpen
   }
-
+  
   return state  
 }

@@ -17,8 +17,6 @@ export const Sidenav = () => {
   const dispatch = useDispatch()
 
   const [style, setStyle] = useState({ width: '0' })
-  const [closedTheSidenav,setClosedTheSidenav] = useState(false)
-  const [preferenceTheme,setPreferenceTheme] = useState('default')
 
   const {
     language,
@@ -27,41 +25,29 @@ export const Sidenav = () => {
   } = useSelector(state => state)
   
   const closeSidenav = () => {
+  
+    const preference = { sidenavIsOpen: false }
 
-    const preferences = {
-      language,
-      theme,
-      sidenavIsOpen: false
-    }
+    dispatch(toggleSideNav(preference))
 
-    dispatch(toggleSideNav(preferences))
-    
-    setClosedTheSidenav(true)
   }
 
   const changeTheme = () => {
 
-    const isDefaultOrDarkTheme = preferenceTheme === 'default' ? 'dark' : 'default';
+    const isWhiteOrDarkTheme = theme === 'white' ? 'dark' : 'white';
 
-    const preferences = {
-      language,
-      theme: isDefaultOrDarkTheme,
-      sidenavIsOpen
-    } 
+    const preference = { theme: isWhiteOrDarkTheme }
+    
+    dispatch(toggleTheme(preference))
 
-    dispatch(toggleTheme(preferences))
-
-    setPreferenceTheme(isDefaultOrDarkTheme)
   }
 
   useEffect(() => {
-    if (!sidenavIsOpen) return 
-
-    const width = closedTheSidenav ? { width: '0' } : { width: '300px' }
+    const width = sidenavIsOpen ? { width: '300px' } : { width: '0' } 
 
     setStyle(width)
 
-  }, [sidenavIsOpen,closedTheSidenav])
+  }, [sidenavIsOpen])
 
   return (
     <StyledSidenav style={ style }>
@@ -74,11 +60,11 @@ export const Sidenav = () => {
       <SideButtons>{ localizedStrings[language].contact }   </SideButtons>
       <SideButtons href="https://felixfreelancer.netlify.app/">{ localizedStrings[language].wantAWebsite }</SideButtons>
       <PreferencesDiv>
-        <p style={{color: 'white'}}>localizedStrings[language].defineTheme</p>
+        <p style={{color: 'white'}}>{ localizedStrings[language].defineTheme }</p>
         <Switch 
           style={{width: '70px'}}
-          checkedChildren={localizedStrings[language].default } 
-          unCheckedChildren={ localizedStrings[language].dark } 
+          checkedChildren={localizedStrings[language].default} 
+          unCheckedChildren={localizedStrings[language].dark} 
           onClick={() => changeTheme()}
           defaultChecked />
       </PreferencesDiv>

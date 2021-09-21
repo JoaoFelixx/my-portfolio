@@ -1,6 +1,6 @@
 const header = {
-  welcome: 'Seja Bem Vindo',
-  myPortfolio: 'Meu Portfólio'
+  welcome: 'Welcome',
+  myPortfolio: 'My Portfolio'
 }
 
 export default header

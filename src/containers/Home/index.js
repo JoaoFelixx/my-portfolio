@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import {
   Contact,
   Header,
@@ -9,12 +11,28 @@ import {
   WorkOne,
   WorkTwo,
   WorkThree,
-} from '../../components'
-import { GridAreas, Body } from './style'
+} from '../../components';
+import { GridAreas, Body } from './style';
 
 export const Home = () => {
+
+  const {
+    theme
+  } = useSelector(state => state)
+
+  const [colorBody,setColorBody] = useState({})
+
+
+  useEffect(() => {
+
+    return theme === 'white' 
+      ? setColorBody({ backgroundColor: '#fff', transition: '1s' })
+      : setColorBody({ backgroundColor: '#1C1C1C', transition: '1s' }) 
+
+  },[theme])
+
   return (
-    <Body>
+    <Body style={colorBody}>
       <Menu />
       <GridAreas>
         <Sidenav />

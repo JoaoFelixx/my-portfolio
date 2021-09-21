@@ -1,5 +1,5 @@
-import { localizedStrings } from '../../constants'
 import { useSelector } from 'react-redux'
+import { localizedStrings } from '../../constants'
 import {
   Link,
   StyledFooter,
@@ -10,7 +10,7 @@ export const Contact = () => {
   const {
     language,
   } = useSelector(state => state)
-
+  
   return (
     <StyledFooter>
       <h2> { localizedStrings[language].mySocialNetwork } </h2>

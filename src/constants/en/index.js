@@ -6,7 +6,7 @@ import SideNav from './SideNav'
 import Projects from './Projects'
 import Jumbotron from './Jumbotron'
 
-const en = {
+const pt = {
   ...Header,
   ...MySelf,
   ...Contact,
@@ -16,4 +16,4 @@ const en = {
   ...Jumbotron,
 }
 
-export default en
+export default pt

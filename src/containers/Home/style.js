@@ -19,7 +19,6 @@ export const GridAreas = styled.div`
   }
 `;
 
-export const Body = styled.body`
-  margin: 0;
-  padding: 0;
+export const Body = styled.div`
+  
 `;

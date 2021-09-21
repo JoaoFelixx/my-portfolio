@@ -13,10 +13,6 @@ export const StyledH1 = styled.h1(props => ({
 
 export const StyledSpan = styled.span(props => ({
   padding: '4px',
-  ...props
-}))
-
-export const StyledP = styled.p(props => ({
   fontSize: '18px',
   ...props
 }))

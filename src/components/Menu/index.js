@@ -1,6 +1,5 @@
 import { 
   useDispatch, 
-  useSelector 
 } from 'react-redux'
 import { StyledMenu } from "./style"
 import { 
@@ -10,18 +9,9 @@ import {
 export const Menu = () => {
   const dispatch = useDispatch()
   
-  const { 
-    language,
-    theme,
-  } = useSelector(state => state)
-  
   const openSidenav = () => {
     
-    const preferences = {
-      language,
-      theme,
-      sidenavIsOpen: true
-    }
+    const preferences = { sidenavIsOpen: true }
 
     dispatch(toggleSideNav(preferences))
   }

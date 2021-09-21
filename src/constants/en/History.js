@@ -1,5 +1,5 @@
 const history = {
-  historyWithIT: 'Histótia com TI',
+  historyWithIT: 'History with IT',
   historyWithITContent: `No começo de fevereiro de 2019 lá estava eu iniciando meus estudos na ETEC, eu pensei que se eu fizesse informática para internet
   aprenderia sobre como usar pacote office e ficar muito bom sobre computadores e tal… mas foi quase isso, primeiro aprendi o básico da web
   (protocolos, html e css) aprendi uma base sobre hardware e redes. Mas as coisas foram ficando mais sérias, surgiu o famoso JS que no começo
