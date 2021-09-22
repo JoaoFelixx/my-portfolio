@@ -1,5 +1,6 @@
 import { 
-  useDispatch, 
+  useDispatch,
+  useSelector, 
 } from 'react-redux'
 import { StyledMenu } from "./style"
 import { 
@@ -8,7 +9,11 @@ import {
 
 export const Menu = () => {
   const dispatch = useDispatch()
-  
+  const { 
+    sidenavIsOpen,
+  } = useSelector(state => state)
+
+
   const openSidenav = () => {
     
     const preferences = { sidenavIsOpen: true }
@@ -17,8 +22,13 @@ export const Menu = () => {
   }
 
   return (
-    <StyledMenu onClick={() => openSidenav()}> 
-      &#9776; menu 
-    </StyledMenu>
+    <div>
+      { !sidenavIsOpen && 
+        <StyledMenu onClick={() => openSidenav()}> 
+          &#9776; 
+        </StyledMenu> 
+      }
+    </div>
+    
   )
 }
