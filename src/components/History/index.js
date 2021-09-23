@@ -3,7 +3,9 @@ import { localizedStrings } from '../../constants'
 import { useSelector } from 'react-redux'
 import { 
   HistoryDiv,
-  Content 
+  Content,
+  Image,
+  Text,
 } from './style'
 
 export const History = () => {
@@ -29,13 +31,13 @@ export const History = () => {
   }, [theme])
 
   return (
-    <HistoryDiv>
-      <img loading="lazy" src="./img/programar.png" alt="coding" />
-      <Content style={colorContent}>
+    <HistoryDiv style={colorContent}>
+      <Image loading="lazy" src="./img/programar.png" alt="coding" />
+      <Content>
         <h1 style={colorTitle}> { localizedStrings[language].historyWithIT } </h1>
-        <p>
+        <Text>
         { localizedStrings[language].historyWithITContent }
-        </p>
+        </Text>
       </Content>
     </HistoryDiv>
   )

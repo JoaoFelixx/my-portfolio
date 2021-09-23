@@ -13,3 +13,13 @@ export const Content = styled.div(props => ({
   padding: '16px',
   ...props
 })) 
+
+export const Image = styled.img(props => ({
+  width: '100%',
+  ...props
+}))
+
+export const Text = styled.p(props => ({
+  fontSize: '16px',
+  ...props
+}))
