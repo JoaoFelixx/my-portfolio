@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { localizedStrings } from '../../constants'
 import { useSelector } from 'react-redux'
 import { 
@@ -8,35 +9,54 @@ import {
   Text,
 } from './style'
 
-export default function WorkThree() {
+export const RightSide = () => {
 
   const {
-    language
+    language,
+    theme,
   } = useSelector(state => state)
+
+  const [styleContent, setStyleContent] = useState({})
+  const [styleTitle,setStyleTitle ] = useState({})
+
+
+  useEffect(() => {
+
+    if (theme === 'white') {
+      setStyleContent({ backgroundColor: '#fff', color: '#000000' })
+      setStyleTitle({ color: '#000000' })
+      return
+    }
+       
+    setStyleContent({ backgroundColor: '#4F4F4F', color: '#fff' })
+    setStyleTitle({ color: '#fff' })
+    return 
+
+  },[theme])
 
   return (
     <div>
-      <Project>
+      <Project style={styleContent}>
         <Image src="./img/php.jpg" alt="Projetos desenvolvidos com php" />
         <Content>
-          <Title>{ localizedStrings[language].title.loginPHP }</Title>
+          <Title style={styleTitle}>{ localizedStrings[language].title.loginPHP }</Title>
           <Text>{ localizedStrings[language].content.loginPHP }</Text>
         </Content>
       </Project>
       <br />
-      <Project>
+      <Project style={styleContent}>
         <Image src="https://programathor.com.br/blog/wp-content/uploads/2017/11/programathor-676x355.jpg"
           alt="Programathor" />
         <Content>
-          <Title>{ localizedStrings[language].title.dashboard }</Title>
+          <Title style={styleTitle}>{ localizedStrings[language].title.dashboard }</Title>
           <Text>{ localizedStrings[language].content.dashboard }</Text>
         </Content>
       </Project>
       <br />
-      <Project>
+      <Project style={styleContent}>
         <Image src="./img/robot.jpg" alt="Projeto Next" />
         <Content>
-          <Title>{ localizedStrings[language].title.next }</Title>
+          <Title style={styleTitle}>{ localizedStrings[language].title.next }</Title>
           <Text>{ localizedStrings[language].content.next }</Text>
         </Content>
       </Project>

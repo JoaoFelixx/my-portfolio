@@ -5,9 +5,12 @@ import { Menu } from './Menu'
 import { MySelf } from './MySelf'
 import { Jumbotron } from './Jumbotron'
 import { Sidenav } from './Sidenav'
-import WorkOne from './projects/One' 
-import WorkTwo from './projects/Two'
-import WorkThree from './projects/Three'
+import {  
+  Center,
+  LeftSide,
+  RightSide,
+}  from './projects' 
+
 
 export {
   Contact,
@@ -17,7 +20,7 @@ export {
   MySelf,
   Jumbotron,
   Sidenav,
-  WorkOne,
-  WorkTwo,
-  WorkThree,
+  Center,
+  LeftSide,
+  RightSide,
 }

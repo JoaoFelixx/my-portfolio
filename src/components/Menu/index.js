@@ -1,3 +1,4 @@
+import { MenuOutlined } from '@ant-design/icons'
 import { 
   useDispatch,
   useSelector, 
@@ -25,7 +26,7 @@ export const Menu = () => {
     <div>
       { !sidenavIsOpen && 
         <StyledMenu onClick={() => openSidenav()}> 
-          &#9776; 
+          <MenuOutlined style={{ width: '50px', heigth: '50px' }} /> 
         </StyledMenu> 
       }
     </div>

@@ -1,14 +1,13 @@
 const sidenav = {
-  home: 'Home',
-  history: 'História',
-  aboutMe: 'Sobre mim',
-  wantAWebSite: 'Quero um site',
+  home: ' Home',
+  history: ' História',
+  aboutMe: ' Sobre mim',
+  wantAWebSite: ' Quero um site',
   projects: 'Projetos',
-  softSkills: 'Soft Skills',
-  contact: 'Contato',
+  contact: ' Contato',
   default: 'Padrão',
   dark: 'Escuro',
-  defineTheme: 'Defina o tema abaixo'
+  defineTheme: 'Defina o tema '
 }
 
 export default sidenav

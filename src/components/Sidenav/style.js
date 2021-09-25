@@ -22,9 +22,11 @@ export const SideButtons = styled.a`
   color: #818181;
   display: block;
   transition: 0.3s;
+  border: 1px solid rgb(34, 36, 37);
   &:hover {
-    transition: 0.5s;
-    color: #00BFFF;
+    transition: 1s;
+    background-color: #1878D1;
+    color: #fff;
     text-decoration: none;
   }
 `;

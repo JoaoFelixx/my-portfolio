@@ -6,6 +6,14 @@ import {
   toggleSideNav, 
   toggleTheme,
 } from '../../store/actions'
+import { 
+  HomeOutlined,
+  BookOutlined,
+  BulbOutlined,
+  LikeOutlined,
+  LaptopOutlined,
+  FundProjectionScreenOutlined, 
+} from '@ant-design/icons'
 import {
   CloseButton,
   SideButtons,
@@ -52,22 +60,40 @@ export const Sidenav = () => {
   return (
     <StyledSidenav style={ style }>
       <CloseButton onClick={() => closeSidenav()}> &times;  </CloseButton>
-      <SideButtons>{ localizedStrings[language].home }      </SideButtons>
-      <SideButtons>{ localizedStrings[language].history }   </SideButtons>
-      <SideButtons>{ localizedStrings[language].aboutMe }   </SideButtons>
-      <SideButtons>{ localizedStrings[language].projects }  </SideButtons>
-      <SideButtons>{ localizedStrings[language].softSkills }</SideButtons>
-      <SideButtons>{ localizedStrings[language].contact }   </SideButtons>
-      <SideButtons href="https://felixfreelancer.netlify.app/">{ localizedStrings[language].wantAWebsite }</SideButtons>
+      <SideButtons>
+        <HomeOutlined />
+        {" "+localizedStrings[language].home }      
+      </SideButtons>
+      <SideButtons>
+        <BookOutlined />  
+        {" "+localizedStrings[language].history }   
+      </SideButtons>
+      <SideButtons>
+        <BulbOutlined />        
+        {" "+localizedStrings[language].aboutMe }   
+      </SideButtons>
+      <SideButtons>
+        <FundProjectionScreenOutlined />        
+        {" "+localizedStrings[language].projects }  
+      </SideButtons>
+      <SideButtons>
+        <LikeOutlined />        
+        {" "+localizedStrings[language].contact }   
+      </SideButtons>
+      <SideButtons href="https://felixfreelancer.netlify.app/">
+        <LaptopOutlined />        
+        {" "+localizedStrings[language].wantAWebSite }
+      </SideButtons>
       <PreferencesDiv>
-        <p style={{color: 'white'}}>{ localizedStrings[language].defineTheme }</p>
+        <p style={{ fontSize: '20px', color: 'white'}}>{ localizedStrings[language].defineTheme } </p>
         <Switch 
-          style={{width: '70px'}}
+          style={{width: '90px', height: '22px'}}
           checkedChildren={localizedStrings[language].default} 
           unCheckedChildren={localizedStrings[language].dark} 
           onClick={() => changeTheme()}
           defaultChecked />
-      </PreferencesDiv>
+      </PreferencesDiv>      
     </StyledSidenav>
+
   )
 }

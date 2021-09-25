@@ -8,9 +8,9 @@ import {
   MySelf,
   Jumbotron,
   Sidenav,
-  WorkOne,
-  WorkTwo,
-  WorkThree,
+  Center,
+  LeftSide,
+  RightSide,
 } from '../../components';
 import { GridAreas, Body } from './style';
 
@@ -24,27 +24,32 @@ export const Home = () => {
 
 
   useEffect(() => {
-
-    return theme === 'white' 
-      ? setColorBody({ backgroundColor: '#fff', transition: '1s' })
-      : setColorBody({ backgroundColor: '#1C1C1C', transition: '1s' }) 
-
+    if (theme === 'white') {
+      setColorBody({ backgroundColor: '#fff', transition: '1s' })
+      document.body.style.transition = '1s'
+      document.body.style.backgroundColor = '#fff';
+      return    
+    }
+    
+    setColorBody({ backgroundColor: '#1C1C1C', transition: '1s' })
+    document.body.style.transition = '1s' 
+    document.body.style.backgroundColor = '#1C1C1C';
   },[theme])
 
   return (
     <Body style={colorBody}>
-      <Menu />
+      <Menu/>
       <GridAreas>
-        <Sidenav />
-        <Header />
-        <History />
-        <MySelf />
-        <Jumbotron />
-        <WorkOne />
-        <WorkTwo />
-        <WorkThree />
+        <Sidenav/>
+        <Header/>
+        <History/>
+        <MySelf/>
+        <Jumbotron/>
+        <LeftSide/>
+        <Center/>
+        <RightSide/>
       </GridAreas>
-      <Contact />
+      <Contact/>
     </Body>
   )
 }
