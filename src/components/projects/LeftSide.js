@@ -7,6 +7,7 @@ import {
   Image,
   Title,
   Text,
+  Link,
 } from './style'
 
 export const LeftSide = () => {
@@ -41,6 +42,7 @@ export const LeftSide = () => {
         <Content> 
           <Title style={styleTitle}>{ localizedStrings[language].title.tese }</Title>
           <Text>{ localizedStrings[language].content.tese }</Text>
+          <Link>{ localizedStrings[language].viewProject }</Link>
         </Content>
       </Project>
       <br />
@@ -49,6 +51,7 @@ export const LeftSide = () => {
         <Content> 
           <Title style={styleTitle}>{ localizedStrings[language].title.quiz }</Title>
           <Text>{ localizedStrings[language].content.quiz }</Text>
+          <Link style={{ position: 'relative', top: '3px' }}>{ localizedStrings[language].viewProject }</Link>
         </Content>
       </Project>
       <br />
@@ -57,6 +60,7 @@ export const LeftSide = () => {
         <Content>
           <Title style={styleTitle}>{ localizedStrings[language].title.customWare }</Title>
           <Text>{ localizedStrings[language].content.customWare }</Text>
+          <Link>{ localizedStrings[language].viewProject }</Link>
         </Content> 
       </Project>
     </div>

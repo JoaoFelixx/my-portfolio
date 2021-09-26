@@ -7,6 +7,7 @@ import {
   Title,
   Text,
   Image,
+  Link,
 } from './style';
 
 export const Center = () => {
@@ -41,6 +42,7 @@ export const Center = () => {
         <Content>
           <Title style={styleTitle}>{ localizedStrings[language].title.fsNode }</Title>
           <Text>{ localizedStrings[language].content.fsNode }</Text>
+          <Link>{ localizedStrings[language].viewProject }</Link>        
         </Content>
       </Project>
       <br />
@@ -49,6 +51,7 @@ export const Center = () => {
         <Content>
           <Title style={styleTitle}>{ localizedStrings[language].title.api }</Title>
           <Text>{ localizedStrings[language].content.api }</Text>
+          <Link>{ localizedStrings[language].viewProject }</Link>
         </Content>
       </Project>
       <br />
@@ -57,6 +60,7 @@ export const Center = () => {
         <Content>
           <Title style={styleTitle}>{ localizedStrings[language].title.loginSimulator }</Title>
           <Text>{ localizedStrings[language].content.loginSimulator }</Text>
+          <Link>{ localizedStrings[language].viewProject }</Link>        
         </Content>
       </Project>
     </div>

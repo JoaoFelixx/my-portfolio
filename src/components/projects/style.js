@@ -4,7 +4,6 @@ export const Project = styled.div`
   position: relative;
   top: 75px;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
-  cursor: pointer;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
@@ -41,3 +40,21 @@ export const Title = styled.h3`
 export const Text = styled.p`
   font-size: 18px;
 `;
+
+export const Link = styled.button`
+  width: 100%;
+  height: 40px;
+  background-color: #1878D1;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  &:hover {
+    transition: 1s; 
+    background-color: #1331E8;
+  }    
+`;
+
+
+

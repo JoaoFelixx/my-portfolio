@@ -1,4 +1,5 @@
 const Projects = {
+  viewProject: 'Ver projeto',  
   title: {
     tese: 'Tese Mobilidade',
     customWare: 'Custom Ware',
@@ -11,15 +12,15 @@ const Projects = {
     next: 'Projeto Next'
   },
   content: {
-    tese: `Site desenvolvido com HTML, CSS, JS & Bootstrap, o site vem apresentando um projeto front-end cujo a idéia inicial foi criar uma página estática.`,
-    customWare: `Esse projeto eu não o desenvolvi sozinho, tive ajudas de amigos para conseguir o diploma usando esse projeto como TCC.`,
-    quiz: `Jogo desenvolvido com 99% '.Js', o obejetivo era ser um jogo divertido que pudessse ser jogado por qualquer dispositivo, sendo responsivo e muito dinâmico.`,
-    fsNode: 'Aqui mostra como pode ser feito um sistema de upload de arquivos com NodeJS (imagens, videos, PDF, pastas, etc.).',
+    tese: `A Tese Mobilidade é um projeto que eu desenvolvi com amigos no inicio dos meus estudos, ele é um projeto sobre um sistema de ônibus (fictício) que atuaria na cidade de São Vicente mas ele é apenas front-end, é um projeto bem simples .`,
+    customWare: `A Custow Ware é um super projeto ! Ela foi desenvolvida pela minha equipe de TCC foi o primeiro projeto “grande” que eu fiz, usando tecnologias simples como:  HTML, CSS, JS, PHP, MySQL & Bootstrap.`,
+    quiz: `Esse quiz Foi desenvolvido para ser um jogo divertido e com uma interação com o usuário excessiva, era um experimento que eu fiz para saber ver como o javascript lida com muitos eventos    simultâneos  e gostei bastante do resultado. `,
+    fsNode: 'Esse é um sistema simples (bem simples) de como fazer uploads de arquivos com Node JS (imagens, vídeos, PDF, arquivos, etc.) com esse sistema você pode fazer upload dos arquivos para plataformas como S3 (AWS). É um bom começo para fazer um sistema grande !',
     api: "Já pensou em construir uma API que retorna '.json' para poder desenvolver para Android, IOS e até mesmo projetos Web com React,Vue, Angular, etc.esse projeto tem o fim de ajudar a desenvolver aplicações multiplataformas.",
-    loginSimulator: "Simulador de Login feito com JS usando LocalStorage como simulador de Banco de dados !",
-    loginPHP: 'Projeto desenvolvido com PHP a linguagem mais famosa da web, aqui estão os arquivos que são totalmente personalizaveis para fazer alterações e colocar dentro de seu plano de negócio.',
-    dashboard: 'Nesse projeto eu estava aprendendo a usar css grid layout, assim como este site que você está navegando foi inteiramente feito com css grid layout.',
-    next: "Nesse projeto eu desenvolvi uma 'IA' ('I'nteligência 'A'rtificial) que ela pode responder perguntas de acordo com a sua API de resposta, eu utilizei um arquivo '.json' Estático.",
+    loginSimulator: "Você é iniciante e gostaria de saber como funciona um login na realidade ? Com esse projeto você pode entender como funciona um. Mas atente-se, isso é um simulador ! Um projeto de login real não funciona do lado do cliente.",
+    loginPHP: 'Projeto desenvolvido com PHP a “linguagem mais famosa” da web, Esse sistema foi feito colocandomáximo de simplicidade dentro do código para que até iniciantes na linguagem possam fazer alterações e melhorias.',
+    dashboard: 'Nesse projeto foi o meu primeiro exercício com Grid layout do CSS, é um projeto interessante se você quer aprender como funciona o grid do CSS na prática, Esse site que você está vendo também foi desenvolvido com Grid Layout',
+    next: "Nesse projeto super divertido eu simulei uma IA (Inteligência artificial) que pode responder algumas perguntas que forem colocadas dentro de um arquivo .json que está no meu github, você coloca a pergunta seguida da resposta e ele responde.",
   }
 }
 
