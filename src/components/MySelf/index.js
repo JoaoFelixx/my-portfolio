@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react'
-import { localizedStrings } from '../../constants'
-import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { localizedStrings } from '../../constants';
 import {
   MySelfDiv,
   Content,
   Image,
   Text,
-} from './style'
+} from './style';
 
 export const MySelf = () => {
 
-  const [styleContent, setStyleContent] = useState({})
-  const [styleTitle, setStyleTitle] = useState({})
+  const [styleContent, setStyleContent] = useState({});
+  const [styleTitle, setStyleTitle] = useState({});
   const {
     theme,
     language,
-  } = useSelector(state => state)
+  } = useSelector(state => state);
 
 
   useEffect(() => {
 
     if (theme === 'white') {
-      setStyleContent({ backgroundColor: '#fff', color: '#000000' })
-      setStyleTitle({color: '#000000'})
+      setStyleContent({ backgroundColor: '#fff', color: '#000000' });
+      setStyleTitle({color: '#000000'});
       return 
     }
 
-    setStyleContent({ backgroundColor: '#4F4F4F', color: '#fff' })
-    setStyleTitle({color: '#fff'})
+    setStyleContent({ backgroundColor: '#4F4F4F', color: '#fff' });
+    setStyleTitle({color: '#fff'});
 
   }, [theme])
 

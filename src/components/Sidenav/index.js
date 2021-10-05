@@ -1,11 +1,7 @@
-import { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { Switch } from 'antd'
-import { localizedStrings } from '../../constants'
-import { 
-  toggleSideNav, 
-  toggleTheme,
-} from '../../store/actions'
+import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Switch } from 'antd';
+import { localizedStrings } from '../../constants';
 import { 
   HomeOutlined,
   BookOutlined,
@@ -13,30 +9,36 @@ import {
   LikeOutlined,
   LaptopOutlined,
   FundProjectionScreenOutlined, 
-} from '@ant-design/icons'
+} from '@ant-design/icons';
+import { 
+  toggleSideNav, 
+  toggleTheme,
+} from '../../store/actions';
 import {
   CloseButton,
   SideButtons,
   StyledSidenav,
   PreferencesDiv,
-} from './style'
+} from './style';
 
 export const Sidenav = () => {
-  const dispatch = useDispatch()
+  const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513996409539&text=';
+  
+  const dispatch = useDispatch();
 
-  const [style, setStyle] = useState({ width: '0' })
+  const [style, setStyle] = useState({ width: '0' });
 
   const {
     language,
     theme,
     sidenavIsOpen,
-  } = useSelector(state => state)
+  } = useSelector(state => state);
   
   const closeSidenav = () => {
   
     const preference = { sidenavIsOpen: false }
 
-    dispatch(toggleSideNav(preference))
+    dispatch(toggleSideNav(preference));
 
   }
 
@@ -46,20 +48,32 @@ export const Sidenav = () => {
 
     const preference = { theme: isWhiteOrDarkTheme }
     
-    dispatch(toggleTheme(preference))
+    dispatch(toggleTheme(preference));
 
+  }
+
+  const sendMessage = () => {
+    const hour = new Date().getHours();
+
+    if (hour > 6 && hour < 12) 
+      window.location.assign(API_WHATS_APP+'Boa%dia%20João!');
+
+    if (hour > 12 && hour < 18) 
+      window.location.assign(API_WHATS_APP+'Boa%20tarde%20João!');
+
+    alert('Fora do horário de funcionamento');
   }
 
   useEffect(() => {
     const width = sidenavIsOpen ? { width: '300px' } : { width: '0' } 
 
-    setStyle(width)
+    setStyle(width);
 
   }, [sidenavIsOpen])
 
   return (
     <StyledSidenav style={ style }>
-      <CloseButton onClick={() => closeSidenav()}> &times;  </CloseButton>
+      <CloseButton onClick={() => closeSidenav()}> &times; </CloseButton>
       <SideButtons>
         <HomeOutlined />
         {" "+localizedStrings[language].home }      
@@ -80,7 +94,7 @@ export const Sidenav = () => {
         <LikeOutlined />        
         {" "+localizedStrings[language].contact }   
       </SideButtons>
-      <SideButtons href="https://felixfreelancer.netlify.app/">
+      <SideButtons onClick={() => sendMessage()}>
         <LaptopOutlined />        
         {" "+localizedStrings[language].wantAWebSite }
       </SideButtons>

@@ -1,6 +1,6 @@
-import { useEffect, useState} from 'react'
-import { localizedStrings } from '../../constants'
-import { useSelector } from 'react-redux'
+import { useEffect, useState} from 'react';
+import { localizedStrings } from '../../constants';
+import { useSelector } from 'react-redux';
 import { 
   StyledHeader, 
   StyledSpan, 
@@ -11,21 +11,20 @@ export const Header = () => {
   const {
     language,
     theme,
-  } = useSelector(state => state)
+  } = useSelector(state => state);
 
-  const [colorParagraph,setColorParagraph] = useState({})
-  const [colorTitle,setColorTitle] = useState({})
+  const [colorParagraph,setColorParagraph] = useState({});
+  const [colorTitle,setColorTitle] = useState({});
 
   useEffect(() => {
     if (theme === 'white') {
-      setColorParagraph({ background: '#000000', color: '#fff' }) 
-      setColorTitle({ color: '#000000' })
-      return
+      setColorParagraph({ background: '#000000', color: '#fff' });
+      setColorTitle({ color: '#000000' });
+      return;
     }
 
-    setColorParagraph({ background: '#fff', color: '#000000' })
-    setColorTitle({ color: '#fff' })
-    
+    setColorParagraph({ background: '#fff', color: '#000000' });
+    setColorTitle({ color: '#fff' });
   },[theme])
 
   return (

@@ -11,6 +11,8 @@ export const MySelfDiv = styled.div(props => ({
 
 export const Content = styled.div(props => ({
   padding: '16px',
+  fontSize: '18px',
+  fontWight: 'bold',
   ...props
 })) 
 
@@ -20,6 +22,6 @@ export const Image = styled.img(props => ({
 }))
 
 export const Text = styled.p(props => ({
-  fontSize: '16px',
+  fontSize: '18px',
   ...props
 }))

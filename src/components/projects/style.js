@@ -8,7 +8,7 @@ export const Project = styled.div`
   border-top-right-radius: 20px;
   overflow: hidden;
   border: 1px solid #000000;
-  height: 500px;
+  height: auto;
   width: 100%;
   max-width: 100%;
   -moz-transition: all 0.3s;

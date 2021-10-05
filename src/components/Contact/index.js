@@ -1,15 +1,15 @@
-import { useSelector } from 'react-redux'
-import { localizedStrings } from '../../constants'
+import { useSelector } from 'react-redux';
+import { localizedStrings } from '../../constants';
 import {
   Link,
   StyledFooter,
-} from './style'
+} from './style';
 
 export const Contact = () => {
 
   const {
     language,
-  } = useSelector(state => state)
+  } = useSelector(state => state);
   
   return (
     <StyledFooter>

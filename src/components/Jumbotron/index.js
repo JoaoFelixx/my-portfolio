@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import { localizedStrings } from '../../constants'
-import { StyledJumbotron } from './style'
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { localizedStrings } from '../../constants';
+import { StyledJumbotron } from './style';
 
 export const Jumbotron = () => {
   const {
     theme,
     language,
-  } = useSelector(state => state)
+  } = useSelector(state => state);
   
-  const [colorContent, setContentColor] = useState({})
+  const [colorContent, setContentColor] = useState({});
 
   useEffect(() => {
      
-    return theme === 'white'
+    theme === 'white'
       ? setContentColor({ background: '#000000' })
       : setContentColor({ background: '#4F4F4F' })
 
