@@ -32,7 +32,7 @@ export const MySelf = () => {
   }, [theme])
 
   return (
-    <MySelfDiv style={styleContent}>
+    <MySelfDiv id="MySelf" style={styleContent}>
       <Image loading="lazy" src="./img/joao.jpg" alt="João-Carlos-Felix" />
       <Content>
         <h1 style={styleTitle}> { localizedStrings[language].myName } </h1>

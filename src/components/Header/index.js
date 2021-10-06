@@ -28,7 +28,7 @@ export const Header = () => {
   },[theme])
 
   return (
-    <StyledHeader>
+    <StyledHeader id="Home">
       <StyledH1  style={colorTitle}>{ localizedStrings[language].myPortfolio }</StyledH1>
       
       <StyledSpan style={colorParagraph}>{ localizedStrings[language].welcome }</StyledSpan> 

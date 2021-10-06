@@ -74,23 +74,23 @@ export const Sidenav = () => {
   return (
     <StyledSidenav style={ style }>
       <CloseButton onClick={() => closeSidenav()}> &times; </CloseButton>
-      <SideButtons>
+      <SideButtons href="#Home">
         <HomeOutlined />
         {" "+localizedStrings[language].home }      
       </SideButtons>
-      <SideButtons>
+      <SideButtons href="#History">
         <BookOutlined />  
         {" "+localizedStrings[language].history }   
       </SideButtons>
-      <SideButtons>
+      <SideButtons href="#MySelf">
         <BulbOutlined />        
         {" "+localizedStrings[language].aboutMe }   
       </SideButtons>
-      <SideButtons>
+      <SideButtons href="#Project">
         <FundProjectionScreenOutlined />        
         {" "+localizedStrings[language].projects }  
       </SideButtons>
-      <SideButtons>
+      <SideButtons href="#Contact">
         <LikeOutlined />        
         {" "+localizedStrings[language].contact }   
       </SideButtons>
@@ -108,6 +108,5 @@ export const Sidenav = () => {
           defaultChecked />
       </PreferencesDiv>      
     </StyledSidenav>
-
   )
 }

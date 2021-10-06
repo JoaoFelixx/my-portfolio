@@ -30,7 +30,7 @@ export const History = () => {
   }, [theme])
 
   return (
-    <HistoryDiv style={colorContent}>
+    <HistoryDiv id="History" style={colorContent}>
       <Image loading="lazy" src="./img/programar.png" alt="coding" />
       <Content>
         <h1 style={colorTitle}> { localizedStrings[language].historyWithIT } </h1>

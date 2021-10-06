@@ -12,14 +12,12 @@ export const Jumbotron = () => {
   const [colorContent, setContentColor] = useState({});
 
   useEffect(() => {
-     
-    theme === 'white'
-      ? setContentColor({ background: '#000000' })
-      : setContentColor({ background: '#4F4F4F' })
+    
+    setContentColor(theme === 'white' ? { background: '#000000' } : { background: '#4F4F4F' })
 
   }, [theme])
   return (
-    <StyledJumbotron style={colorContent}>
+    <StyledJumbotron id="Project" style={colorContent}>
       <h1 style={{ color: '#fff' }}> { localizedStrings[language].projectsDeveloped } </h1>
     </StyledJumbotron>
   )

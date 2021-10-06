@@ -12,7 +12,7 @@ export const Contact = () => {
   } = useSelector(state => state);
   
   return (
-    <StyledFooter>
+    <StyledFooter id="Contact">
       <h2> { localizedStrings[language].mySocialNetwork } </h2>
       <Link 
         className="fa fa-facebook"
