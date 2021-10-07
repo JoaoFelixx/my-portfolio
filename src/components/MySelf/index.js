@@ -40,7 +40,7 @@ export const MySelf = () => {
         <Text> { localizedStrings[language].ITStudent } <span> { localizedStrings[language].startedOnProgramming } </span></Text>
         <Text> { localizedStrings[language].currently } </Text>
         
-        <a href="#projects"> { localizedStrings[language].clickHere } </a>
+        <a href="#Project"> { localizedStrings[language].clickHere } </a>
       </Content>
     </MySelfDiv>
   )
