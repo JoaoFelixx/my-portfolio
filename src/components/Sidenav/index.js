@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Switch } from 'antd';
+import { Switch, message } from 'antd';
 import { localizedStrings } from '../../constants';
 import { 
   HomeOutlined,
@@ -56,12 +56,12 @@ export const Sidenav = () => {
     const hour = new Date().getHours();
 
     if (hour > 6 && hour < 12) 
-      return window.location.assign(API_WHATS_APP+'Boa%20dia%20João!');
+      return window.location.assign(API_WHATS_APP+localizedStrings[language].goodMorning);
 
     if (hour > 12 && hour < 18) 
-      return window.location.assign(API_WHATS_APP+'Boa%20tarde%20João!');
+      return window.location.assign(API_WHATS_APP+localizedStrings[language].goodAfternoon);
 
-    alert('Fora do horário de funcionamento');
+    message.error(localizedStrings[language].outOfOfficeHours);
   }
 
   useEffect(() => {
