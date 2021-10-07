@@ -56,10 +56,10 @@ export const Sidenav = () => {
     const hour = new Date().getHours();
 
     if (hour > 6 && hour < 12) 
-      window.location.assign(API_WHATS_APP+'Boa%dia%20João!');
+      return window.location.assign(API_WHATS_APP+'Boa%20dia%20João!');
 
     if (hour > 12 && hour < 18) 
-      window.location.assign(API_WHATS_APP+'Boa%20tarde%20João!');
+      return window.location.assign(API_WHATS_APP+'Boa%20tarde%20João!');
 
     alert('Fora do horário de funcionamento');
   }
