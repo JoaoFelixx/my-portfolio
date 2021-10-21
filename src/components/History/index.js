@@ -31,7 +31,7 @@ export const History = () => {
 
   return (
     <HistoryDiv id="History" style={colorContent}>
-      <Image loading="lazy" src="./img/programar.png" alt="coding" />
+      <Image loading="lazy" src="./img/code.jpg" alt="coding" />
       <Content>
         <h1 style={colorTitle}> { localizedStrings[language].historyWithIT } </h1>
         <Text>
