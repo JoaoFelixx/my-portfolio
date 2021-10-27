@@ -8,13 +8,12 @@ import {
 } from './style';
 
 export const Header = () => {
-  const {
-    language,
-    theme,
-  } = useSelector(state => state);
 
   const [colorParagraph,setColorParagraph] = useState({});
   const [colorTitle,setColorTitle] = useState({});
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
     if (theme === 'white') {
@@ -29,9 +28,9 @@ export const Header = () => {
 
   return (
     <StyledHeader id="Home">
-      <StyledH1  style={colorTitle}>{ localizedStrings[language].myPortfolio }</StyledH1>
+      <StyledH1  style={colorTitle}>{ localizedStrings.myPortfolio }</StyledH1>
       
-      <StyledSpan style={colorParagraph}>{ localizedStrings[language].welcome }</StyledSpan> 
+      <StyledSpan style={colorParagraph}>{ localizedStrings.welcome }</StyledSpan> 
     </StyledHeader>
   )
 }

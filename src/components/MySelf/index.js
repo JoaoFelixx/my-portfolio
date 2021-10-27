@@ -14,9 +14,7 @@ export const MySelf = () => {
   const [styleTitle, setStyleTitle] = useState({});
   const {
     theme,
-    language,
   } = useSelector(state => state);
-
 
   useEffect(() => {
 
@@ -35,12 +33,12 @@ export const MySelf = () => {
     <MySelfDiv id="MySelf" style={styleContent}>
       <Image loading="lazy" src="./img/joao.jpg" alt="João-Carlos-Felix" />
       <Content>
-        <h1 style={styleTitle}> { localizedStrings[language].myName } </h1>
+        <h1 style={styleTitle}> { localizedStrings.myName } </h1>
         
-        <Text> { localizedStrings[language].ITStudent } <span> { localizedStrings[language].startedOnProgramming } </span></Text>
-        <Text> { localizedStrings[language].currently } </Text>
+        <Text> { localizedStrings.ITStudent } <span> { localizedStrings.startedOnProgramming } </span></Text>
+        <Text> { localizedStrings.currently } </Text>
         
-        <a href="#Project"> { localizedStrings[language].clickHere } </a>
+        <a href="#Project"> { localizedStrings.clickHere } </a>
       </Content>
     </MySelfDiv>
   )

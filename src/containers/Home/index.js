@@ -16,13 +16,11 @@ import { GridAreas, Body } from './style';
 
 export const Home = () => {
 
+  const [colorBody,setColorBody] = useState({})
   const {
     theme
   } = useSelector(state => state)
-
-  const [colorBody,setColorBody] = useState({})
-
-
+  
   useEffect(() => {
     if (theme === 'white') {
       setColorBody({ backgroundColor: '#fff', transition: '1s' })

@@ -11,15 +11,12 @@ import {
 } from './style';
 
 export const Center = () => {
-
-  const {
-    language,
-    theme,
-  } = useSelector(state => state);
-
+  
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle,setStyleTitle ] = useState({});
-
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
 
@@ -38,10 +35,10 @@ export const Center = () => {
       <Project style={styleContent}>
         <Image src="./img/node.png" alt="NodeJS projects" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.fsNode }</Title>
-          <Text>{ localizedStrings[language].content.fsNode }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.fsNode }</Title>
+          <Text>{ localizedStrings.content.fsNode }</Text>
           <a href="https://github.com/JoaoFelixx/system-files-nodejs">
-            <Link>{ localizedStrings[language].viewProject }</Link>        
+            <Link>{ localizedStrings.viewProject }</Link>        
           </a>
         </Content>
       </Project>
@@ -49,10 +46,10 @@ export const Center = () => {
       <Project style={styleContent}>
         <Image src="./img/server.png" alt="NodeJS projects" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.api }</Title>
-          <Text>{ localizedStrings[language].content.api }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.api }</Title>
+          <Text>{ localizedStrings.content.api }</Text>
           <a href="https://github.com/JoaoFelixx/API-nodeJS">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>
@@ -60,10 +57,10 @@ export const Center = () => {
       <Project style={styleContent}>
         <Image src="./img/login.png" alt="Login System" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.loginSimulator }</Title>
-          <Text>{ localizedStrings[language].content.loginSimulator }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.loginSimulator }</Title>
+          <Text>{ localizedStrings.content.loginSimulator }</Text>
           <a href="https://joaofelixx.github.io/back-end_simulator_with_js/">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>        
         </Content>
       </Project>

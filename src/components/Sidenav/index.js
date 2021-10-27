@@ -23,13 +23,9 @@ import {
 
 export const Sidenav = () => {
   const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513996409539&text=';
-  
   const dispatch = useDispatch();
-
   const [style, setStyle] = useState({ width: '0' });
-
   const {
-    language,
     theme,
     sidenavIsOpen,
   } = useSelector(state => state);
@@ -56,12 +52,11 @@ export const Sidenav = () => {
     const hour = new Date().getHours();
 
     if (hour >= 6 && hour < 12) 
-      return window.location.assign(API_WHATS_APP+localizedStrings[language].goodMorning);
+      return window.location.assign(API_WHATS_APP+localizedStrings.goodMorning);
 
     if (hour >= 12 && hour < 18) 
-      return window.location.assign(API_WHATS_APP+localizedStrings[language].goodAfternoon);
-
-    message.error(localizedStrings[language].outOfOfficeHours);
+      return window.location.assign(API_WHATS_APP+localizedStrings.goodAfternoon);
+    message.error(localizedStrings.outOfOfficeHours);
   }
 
   useEffect(() => {
@@ -76,34 +71,34 @@ export const Sidenav = () => {
       <CloseButton onClick={() => closeSidenav()}> &times; </CloseButton>
       <SideButtons href="#Home">
         <HomeOutlined />
-        {" "+localizedStrings[language].home }      
+        {" "+localizedStrings.home }      
       </SideButtons>
       <SideButtons href="#History">
         <BookOutlined />  
-        {" "+localizedStrings[language].history }   
+        {" "+localizedStrings.history }   
       </SideButtons>
       <SideButtons href="#MySelf">
         <BulbOutlined />        
-        {" "+localizedStrings[language].aboutMe }   
+        {" "+localizedStrings.aboutMe }   
       </SideButtons>
       <SideButtons href="#Project">
         <FundProjectionScreenOutlined />        
-        {" "+localizedStrings[language].projects }  
+        {" "+localizedStrings.projects }  
       </SideButtons>
       <SideButtons href="#Contact">
         <LikeOutlined />        
-        {" "+localizedStrings[language].contact }   
+        {" "+localizedStrings.contact }   
       </SideButtons>
       <SideButtons onClick={() => sendMessage()}>
         <LaptopOutlined />        
-        {" "+localizedStrings[language].wantAWebSite }
+        {" "+localizedStrings.wantAWebSite }
       </SideButtons>
       <PreferencesDiv>
-        <p style={{ fontSize: '20px', color: 'white'}}>{ localizedStrings[language].defineTheme } </p>
+        <p style={{ fontSize: '20px', color: 'white'}}>{ localizedStrings.defineTheme } </p>
         <Switch 
           style={{width: '90px', height: '22px'}}
-          checkedChildren={localizedStrings[language].default} 
-          unCheckedChildren={localizedStrings[language].dark} 
+          checkedChildren={localizedStrings.default} 
+          unCheckedChildren={localizedStrings.dark} 
           onClick={() => changeTheme()}
           defaultChecked />
       </PreferencesDiv>      

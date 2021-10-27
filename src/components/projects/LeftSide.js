@@ -12,14 +12,11 @@ import {
 
 export const LeftSide = () => {
 
-  const {
-    language,
-    theme,
-  } = useSelector(state => state);
-
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle,setStyleTitle ] = useState({});
-
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
 
@@ -38,10 +35,10 @@ export const LeftSide = () => {
       <Project style={styleContent}>
         <Image src="./img/tese.png" alt="Tese Mobilidade Company" />
         <Content> 
-          <Title style={styleTitle}>{ localizedStrings[language].title.tese }</Title>
-          <Text>{ localizedStrings[language].content.tese }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.tese }</Title>
+          <Text>{ localizedStrings.content.tese }</Text>
           <a href="https://joaofelixx.github.io/tesemobilidade/">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>
@@ -49,10 +46,10 @@ export const LeftSide = () => {
       <Project style={styleContent}>
         <Image src="./img/quiz.png" alt="Jogo de Quiz desenvolvido com JS" />
         <Content> 
-          <Title style={styleTitle}>{ localizedStrings[language].title.quiz }</Title>
-          <Text>{ localizedStrings[language].content.quiz }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.quiz }</Title>
+          <Text>{ localizedStrings.content.quiz }</Text>
           <a href="https://joaofelixx.github.io/app_quiz/">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>
@@ -60,10 +57,10 @@ export const LeftSide = () => {
       <Project style={styleContent}>
         <Image src="./img/customware.png" alt="Custom Ware Company" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.customWare }</Title>
-          <Text>{ localizedStrings[language].content.customWare }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.customWare }</Title>
+          <Text>{ localizedStrings.content.customWare }</Text>
           <a href="https://github.com/JoaoFelixx/CutomWare-php-simulator-ecommerce">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content> 
       </Project>

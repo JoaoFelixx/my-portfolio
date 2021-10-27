@@ -12,14 +12,11 @@ import {
 
 export const RightSide = () => {
 
-  const {
-    language,
-    theme,
-  } = useSelector(state => state);
-
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle,setStyleTitle ] = useState({});
-
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
 
@@ -38,10 +35,10 @@ export const RightSide = () => {
       <Project style={styleContent}>
         <Image src="./img/php.png" alt="Projetos desenvolvidos com php" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.loginPHP }</Title>
-          <Text>{ localizedStrings[language].content.loginPHP }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.loginPHP }</Title>
+          <Text>{ localizedStrings.content.loginPHP }</Text>
           <a href="https://github.com/JoaoFelixx/login-system-php">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>
@@ -50,10 +47,10 @@ export const RightSide = () => {
         <Image src="./img/programathor.png"
           alt="Programathor" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.dashboard }</Title>
-          <Text>{ localizedStrings[language].content.dashboard }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.dashboard }</Title>
+          <Text>{ localizedStrings.content.dashboard }</Text>
           <a href="https://joaofelixx.github.io/dashboard-programathor/">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>
@@ -61,10 +58,10 @@ export const RightSide = () => {
       <Project style={styleContent}>
         <Image src="./img/next.png" alt="Projeto Next" />
         <Content>
-          <Title style={styleTitle}>{ localizedStrings[language].title.next }</Title>
-          <Text>{ localizedStrings[language].content.next }</Text>
+          <Title style={styleTitle}>{ localizedStrings.title.next }</Title>
+          <Text>{ localizedStrings.content.next }</Text>
           <a href="https://joaofelixx.github.io/robot-chat/">
-            <Link>{ localizedStrings[language].viewProject }</Link>
+            <Link>{ localizedStrings.viewProject }</Link>
           </a>
         </Content>
       </Project>

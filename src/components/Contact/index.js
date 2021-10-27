@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { localizedStrings } from '../../constants';
 import {
   Link,
@@ -6,14 +5,10 @@ import {
 } from './style';
 
 export const Contact = () => {
-
-  const {
-    language,
-  } = useSelector(state => state);
   
   return (
     <StyledFooter id="Contact">
-      <h2> { localizedStrings[language].mySocialNetwork } </h2>
+      <h2> { localizedStrings.mySocialNetwork } </h2>
       <Link 
         className="fa fa-facebook"
         href="https://www.facebook.com/profile.php?id=100025015540249" 

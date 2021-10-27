@@ -10,13 +10,11 @@ import {
 
 export const History = () => {
 
-  const {
-    theme,
-    language,
-  } = useSelector(state => state);
-
   const [colorContent, setColorContent] = useState({});
   const [colorTitle,setColorTitle] = useState({});
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
     if (theme === 'white') {
@@ -33,9 +31,9 @@ export const History = () => {
     <HistoryDiv id="History" style={colorContent}>
       <Image loading="lazy" src="./img/code.jpg" alt="coding" />
       <Content>
-        <h1 style={colorTitle}> { localizedStrings[language].historyWithIT } </h1>
+        <h1 style={colorTitle}> { localizedStrings.historyWithIT } </h1>
         <Text>
-        { localizedStrings[language].historyWithITContent }
+        { localizedStrings.historyWithITContent }
         </Text>
       </Content>
     </HistoryDiv>

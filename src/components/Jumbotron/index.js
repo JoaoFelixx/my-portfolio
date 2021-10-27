@@ -4,12 +4,11 @@ import { localizedStrings } from '../../constants';
 import { StyledJumbotron } from './style';
 
 export const Jumbotron = () => {
-  const {
-    theme,
-    language,
-  } = useSelector(state => state);
   
   const [colorContent, setContentColor] = useState({});
+  const {
+    theme,
+  } = useSelector(state => state);
 
   useEffect(() => {
     
@@ -18,7 +17,7 @@ export const Jumbotron = () => {
   }, [theme])
   return (
     <StyledJumbotron id="Project" style={colorContent}>
-      <h1 style={{ color: '#fff' }}> { localizedStrings[language].projectsDeveloped } </h1>
+      <h1 style={{ color: '#fff' }}> { localizedStrings.projectsDeveloped } </h1>
     </StyledJumbotron>
   )
 }
