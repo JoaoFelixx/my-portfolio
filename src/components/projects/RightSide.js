@@ -33,7 +33,7 @@ export const RightSide = () => {
   return (
     <div>
       <Project style={styleContent}>
-        <Image src="./img/php.png" alt="Projetos desenvolvidos com php" />
+        <Image src="./img/php.jpg" alt="Projetos desenvolvidos com php" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.loginPHP }</Title>
           <Text>{ localizedStrings.content.loginPHP }</Text>
@@ -44,7 +44,7 @@ export const RightSide = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/programathor.png"
+        <Image src="./img/programathor.jpg"
           alt="Programathor" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.dashboard }</Title>
@@ -56,7 +56,7 @@ export const RightSide = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/next.png" alt="Projeto Next" />
+        <Image src="./img/next.jpg" alt="Projeto Next" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.next }</Title>
           <Text>{ localizedStrings.content.next }</Text>

@@ -22,7 +22,7 @@ import {
 } from './style';
 
 export const Sidenav = () => {
-  const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513996409539&text=';
+  const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513997173668text=';
   const dispatch = useDispatch();
   const [style, setStyle] = useState({ width: '0' });
   const {
@@ -56,6 +56,7 @@ export const Sidenav = () => {
 
     if (hour >= 12 && hour < 18) 
       return window.location.assign(API_WHATS_APP+localizedStrings.goodAfternoon);
+      
     message.error(localizedStrings.outOfOfficeHours);
   }
 

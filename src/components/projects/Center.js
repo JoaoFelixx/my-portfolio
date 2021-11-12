@@ -33,7 +33,7 @@ export const Center = () => {
   return (
     <div>
       <Project style={styleContent}>
-        <Image src="./img/node.png" alt="NodeJS projects" />
+        <Image src="./img/node.jpg" alt="NodeJS projects" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.fsNode }</Title>
           <Text>{ localizedStrings.content.fsNode }</Text>
@@ -44,7 +44,7 @@ export const Center = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/server.png" alt="NodeJS projects" />
+        <Image src="./img/server.jpg" alt="NodeJS projects" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.api }</Title>
           <Text>{ localizedStrings.content.api }</Text>
@@ -55,7 +55,7 @@ export const Center = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/login.png" alt="Login System" />
+        <Image src="./img/login.jpg" alt="Login System" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.loginSimulator }</Title>
           <Text>{ localizedStrings.content.loginSimulator }</Text>

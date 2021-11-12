@@ -33,7 +33,7 @@ export const LeftSide = () => {
   return (
     <div >
       <Project style={styleContent}>
-        <Image src="./img/tese.png" alt="Tese Mobilidade Company" />
+        <Image src="./img/tese.jpg" alt="Tese Mobilidade Company" />
         <Content> 
           <Title style={styleTitle}>{ localizedStrings.title.tese }</Title>
           <Text>{ localizedStrings.content.tese }</Text>
@@ -44,7 +44,7 @@ export const LeftSide = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/quiz.png" alt="Jogo de Quiz desenvolvido com JS" />
+        <Image src="./img/quiz.jpg" alt="Jogo de Quiz desenvolvido com JS" />
         <Content> 
           <Title style={styleTitle}>{ localizedStrings.title.quiz }</Title>
           <Text>{ localizedStrings.content.quiz }</Text>
@@ -55,7 +55,7 @@ export const LeftSide = () => {
       </Project>
       <br />
       <Project style={styleContent}>
-        <Image src="./img/customware.png" alt="Custom Ware Company" />
+        <Image src="./img/customware.jpg" alt="Custom Ware Company" />
         <Content>
           <Title style={styleTitle}>{ localizedStrings.title.customWare }</Title>
           <Text>{ localizedStrings.content.customWare }</Text>
