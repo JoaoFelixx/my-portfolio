@@ -1,26 +1,23 @@
-import { Contact } from './Contact'
-import { Header } from './Header'
-import { History } from './History'
-import { Menu } from './Menu'
-import { MySelf } from './MySelf'
-import { Jumbotron } from './Jumbotron'
-import { Sidenav } from './Sidenav'
-import {  
-  Center,
-  LeftSide,
-  RightSide,
-}  from './projects' 
-
+import { Menu } from './Menu';
+import { Cards } from './Cards';
+import { MySelf } from './MySelf';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { History } from './History';
+import { Buttons } from './Buttons'; 
+import { Sidenav } from './Sidenav';
+import { Jumbotron } from './Jumbotron';
+import { FlexContainer } from './FlexContainer';
 
 export {
-  Contact,
+  Menu,
+  Cards,
+  MySelf,
+  Footer,
   Header,
   History,
-  Menu,
-  MySelf,
-  Jumbotron,
+  Buttons,
   Sidenav,
-  Center,
-  LeftSide,
-  RightSide,
+  Jumbotron,
+  FlexContainer,
 }

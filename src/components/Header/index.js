@@ -1,19 +1,19 @@
 import { useEffect, useState} from 'react';
-import { localizedStrings } from '../../constants';
 import { useSelector } from 'react-redux';
 import { 
-  StyledHeader, 
-  StyledSpan, 
-  StyledH1, 
+  Title, 
+  Head, 
+  Span, 
 } from './style';
 
-export const Header = () => {
+export const Header = ({
+  title,
+  subTitle,
+}) => {
 
   const [colorParagraph,setColorParagraph] = useState({});
   const [colorTitle,setColorTitle] = useState({});
-  const {
-    theme,
-  } = useSelector(state => state);
+  const { theme } = useSelector(state => state);
 
   useEffect(() => {
     if (theme === 'white') {
@@ -27,10 +27,9 @@ export const Header = () => {
   },[theme])
 
   return (
-    <StyledHeader id="Home">
-      <StyledH1  style={colorTitle}>{ localizedStrings.myPortfolio }</StyledH1>
-      
-      <StyledSpan style={colorParagraph}>{ localizedStrings.welcome }</StyledSpan> 
-    </StyledHeader>
+    <Head id="Home">
+      <Title  style={colorTitle}>{ title }</Title>
+      <Span style={colorParagraph}>{ subTitle }</Span> 
+    </Head>
   )
 }

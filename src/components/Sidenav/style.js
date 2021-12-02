@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledSidenav = styled.div(props => ({
+export const Nav = styled.div(props => ({
   height: '100%',
   width: '0',
   position: 'fixed',
@@ -15,9 +15,12 @@ export const StyledSidenav = styled.div(props => ({
   ...props
 }))
 
-export const SideButtons = styled.a`
+export const SideButtons = styled.button`
+  width: 100%;
+  background-color: #000000;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
+  text-align: left;  
   font-size: 25px;
   color: #818181;
   display: block;
@@ -47,5 +50,4 @@ export const CloseButton = styled.a`
 
 export const PreferencesDiv = styled.div`
   padding: 8px 8px 8px 32px;
-
 `;

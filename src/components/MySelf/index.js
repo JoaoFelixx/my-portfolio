@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Buttons } from '../Buttons';
+import { Link } from 'react-router-dom';
 import { localizedStrings } from '../../constants';
 import {
-  MySelfDiv,
+  CardMySelf,
   Content,
-  Image,
   Text,
 } from './style';
 
@@ -12,9 +13,8 @@ export const MySelf = () => {
 
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle, setStyleTitle] = useState({});
-  const {
-    theme,
-  } = useSelector(state => state);
+  const { theme } = useSelector(state => state);
+  const { ButtonSocial } = Buttons;
 
   useEffect(() => {
 
@@ -30,16 +30,17 @@ export const MySelf = () => {
   }, [theme])
 
   return (
-    <MySelfDiv id="MySelf" style={styleContent}>
-      <Image loading="lazy" src="./img/joao.jpg" alt="João-Carlos-Felix" />
+    <CardMySelf id="myself" style={styleContent}>
       <Content>
         <h1 style={styleTitle}> { localizedStrings.myName } </h1>
         
         <Text> { localizedStrings.ITStudent } <span> { localizedStrings.startedOnProgramming } </span></Text>
         <Text> { localizedStrings.currently } </Text>
         
-        <a href="#Project"> { localizedStrings.clickHere } </a>
+        <Link to='/projects'> 
+          <ButtonSocial text={localizedStrings.clickHere} />  
+        </Link>
       </Content>
-    </MySelfDiv>
+    </CardMySelf>
   )
 }

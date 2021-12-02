@@ -1,21 +1,15 @@
-import { 
-  useDispatch,
-  useSelector, 
-} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { MenuOutlined } from '@ant-design/icons';
 import { StyledMenu } from "./style";
 import { toggleSideNav } from '../../store/actions';
 
 export const Menu = () => {
-  const dispatch = useDispatch();
-  const { 
-    sidenavIsOpen,
-  } = useSelector(state => state);
+  const dispatch = useDispatch(); 
+  const { sidenavIsOpen } = useSelector(state => state);
 
 
   const openSidenav = () => {
-    
-    const preferences = { sidenavIsOpen: true }
+    const preferences = { sidenavIsOpen: true };
 
     dispatch(toggleSideNav(preferences));
   }
@@ -28,6 +22,5 @@ export const Menu = () => {
         </StyledMenu> 
       }
     </div>
-    
   )
 }

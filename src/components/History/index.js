@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import { localizedStrings } from '../../constants';
 import { useSelector } from 'react-redux';
 import { 
-  HistoryDiv,
+  CardHistory,
   Content,
-  Image,
   Text,
 } from './style';
 
@@ -12,9 +11,7 @@ export const History = () => {
 
   const [colorContent, setColorContent] = useState({});
   const [colorTitle,setColorTitle] = useState({});
-  const {
-    theme,
-  } = useSelector(state => state);
+  const { theme } = useSelector(state => state);
 
   useEffect(() => {
     if (theme === 'white') {
@@ -28,14 +25,11 @@ export const History = () => {
   }, [theme])
 
   return (
-    <HistoryDiv id="History" style={colorContent}>
-      <Image loading="lazy" src="./img/code.jpg" alt="coding" />
+    <CardHistory id="history" style={colorContent}>
       <Content>
         <h1 style={colorTitle}> { localizedStrings.historyWithIT } </h1>
-        <Text>
-        { localizedStrings.historyWithITContent }
-        </Text>
+        <Text> { localizedStrings.historyWithITContent } </Text>
       </Content>
-    </HistoryDiv>
+    </CardHistory>
   )
 }
