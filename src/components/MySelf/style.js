@@ -6,7 +6,6 @@ export const CardMySelf = styled.div`
   top: 5%;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
   grid-area: myself;
-  opacity: 0.8;
 
   @media (max-width: 820px) {
     top: 0;

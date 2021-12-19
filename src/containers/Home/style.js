@@ -16,15 +16,3 @@ export const GridAreas = styled.div`
     margin: 0px;
   }
 `;
-
-export const Body = styled.div`
-  margin: 0;
-  padding: 0;
-  background-image: url('./img/background.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-size: cover;
-  height: auto;
-`;

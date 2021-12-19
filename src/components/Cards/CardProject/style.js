@@ -11,7 +11,6 @@ export const Project = styled.div`
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  opacity: 0.9;
   @media (max-width: 820px) { 
     margin: 0;
     padding: 4px; 

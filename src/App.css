@@ -3,13 +3,3 @@
   margin: 0;
   font-family: 'Sriracha', cursive;
 }
-
-body {
-  background-image: url('./assets/background.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-size: cover;
-  height: auto;
-}
