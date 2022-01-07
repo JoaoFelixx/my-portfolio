@@ -10,7 +10,7 @@ import {
 } from './pages'
 import { localizedStrings } from "./constants";
 
-export const Router = () => {
+function Router() {
   return (
     <BrowserRouter>
       <Routes>
@@ -28,3 +28,5 @@ export const Router = () => {
     </BrowserRouter>
   )
 }
+
+export default Router;

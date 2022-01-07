@@ -32,13 +32,7 @@ function Sidenav() {
     sidenavIsOpen,
   } = useSelector(state => state);
 
-  const closeSidenav = () => {
-
-    const preference = { sidenavIsOpen: false };
-
-    dispatch(toggleSideNav(preference));
-
-  }
+  const closeSidenav = () => dispatch(toggleSideNav({ sidenavIsOpen: false }));
 
   const changeTheme = () => {
 
