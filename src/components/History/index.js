@@ -7,7 +7,7 @@ import {
   Text,
 } from './style';
 
-export const History = () => {
+function History() {
 
   const [colorContent, setColorContent] = useState({});
   const [colorTitle,setColorTitle] = useState({});
@@ -33,3 +33,5 @@ export const History = () => {
     </CardHistory>
   )
 }
+
+export default History;

@@ -1,15 +1,15 @@
 import {
-  Footer,
-  Header,
-  History,
   Menu,
+  Header,
+  Footer,
   MySelf,
   Sidenav,
+  History,
 } from '../../components';
 import { localizedStrings } from '../../constants';
 import { GridAreas } from './style';
 
-export const Home = () => {
+function Home() {
   return (
     <div>
       <Menu />
@@ -18,8 +18,10 @@ export const Home = () => {
         <Sidenav />
         <History />
         <MySelf />
+        <Footer />
       </GridAreas>
-      <Footer />
     </div>
   )
 }
+
+export default Home;

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-export const StyledMenu = styled.span(props => ({
-  position: 'fixed',
-  fontSize: '35px',
-  cursor: 'pointer',
-  zIndex: '1',
-  ...props
-}))
+export const StyledMenu = styled.span`
+  position: fixed;
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 1;
+`;

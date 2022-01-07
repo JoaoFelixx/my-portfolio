@@ -11,6 +11,7 @@ export const Project = styled.div`
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  
   @media (max-width: 820px) { 
     margin: 0;
     padding: 4px; 
@@ -55,6 +56,7 @@ export const Link = styled.button`
   cursor: pointer;
   border-radius: 10px;
   font-size: 18px;
+  
   &:hover {
     transition: 1s; 
     background-color: #1331E8;

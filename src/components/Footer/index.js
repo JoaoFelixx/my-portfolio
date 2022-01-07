@@ -1,14 +1,12 @@
 import React from 'react';
-import { localizedStrings } from '../../constants';
 import {
   Link,
   Foot,
 } from './style';
 
-export const Footer = () => {
+function Footer() {
   return (
     <Foot id="Contact">
-      <h2> { localizedStrings.mySocialNetwork } </h2>
       <Link 
         className="fa fa-facebook"
         href="https://www.facebook.com/profile.php?id=100025015540249" 
@@ -24,3 +22,5 @@ export const Footer = () => {
     </Foot> 
   )
 }
+
+export default Footer;

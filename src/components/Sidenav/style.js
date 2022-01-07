@@ -1,19 +1,18 @@
 import styled from 'styled-components'
 
-export const Nav = styled.div(props => ({
-  height: '100%',
-  width: '0',
-  position: 'fixed',
-  zIndex: '1',
-  top: '0',
-  left: '0',
-  backgroundColor: '#000000',
-  overflowX: 'hidden',
-  transition: '0.5s',
-  paddingTop: '60px',
-  opacity: '0.8',
-  ...props
-}))
+export const Nav = styled.div`
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-X: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 0.8;
+`;
 
 export const SideButtons = styled.button`
   width: 100%;
@@ -26,6 +25,7 @@ export const SideButtons = styled.button`
   display: block;
   transition: 0.3s;
   border: 1px solid rgb(34, 36, 37);
+  
   &:hover {
     transition: 1s;
     background-color: #1878D1;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { localizedStrings } from '../../../constants';
 import {  
-  Project,
-  Content,
+  Link,
+  Text,
   Title,
   Image,
-  Text,
-  Link,
+  Content,
+  Project,
 } from './style';
 
 export const CardProject = ({ 

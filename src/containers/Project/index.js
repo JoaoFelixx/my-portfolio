@@ -7,16 +7,15 @@ import {
   Sidenav,
   Header,
   Footer,
-  Cards,
+  CardProject,
   Menu,
 } from '../../components';
 
-export const Project = () => {
+ function Project() {
 
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle, setStyleTitle] = useState({});
   const { theme } = useSelector(state => state);
-  const { CardProject } = Cards;
 
   useEffect(() => {
 
@@ -208,3 +207,5 @@ export const Project = () => {
     </div>
   )
 }
+
+export default Project;

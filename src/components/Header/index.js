@@ -1,15 +1,14 @@
 import { useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
 import { 
-  Title, 
   Head, 
   Span, 
 } from './style';
 
-export const Header = ({
+function Header({
   title,
   subTitle,
-}) => {
+}) {
 
   const [colorParagraph,setColorParagraph] = useState({});
   const [colorTitle,setColorTitle] = useState({});
@@ -28,8 +27,10 @@ export const Header = ({
 
   return (
     <Head id="Home">
-      <Title  style={colorTitle}>{ title }</Title>
+      <h1  style={colorTitle}>{ title }</h1>
       <Span style={colorParagraph}>{ subTitle }</Span> 
     </Head>
   )
 }
+
+export default Header;

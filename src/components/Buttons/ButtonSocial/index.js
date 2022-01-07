@@ -1,7 +1,9 @@
 import { BlueButton } from './style';
 
-export const ButtonSocial = ({ text }) => {
+function ButtonSocial({ text }) {
   return (
     <BlueButton>{text}</BlueButton>
   )
 }
+
+export default ButtonSocial;

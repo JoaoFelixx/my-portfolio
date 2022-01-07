@@ -1,23 +1,23 @@
-import { Menu } from './Menu';
-import { Cards } from './Cards';
-import { MySelf } from './MySelf';
-import { Footer } from './Footer';
-import { Header } from './Header';
-import { History } from './History';
-import { Buttons } from './Buttons'; 
-import { Sidenav } from './Sidenav';
-import { Jumbotron } from './Jumbotron';
+import Menu from './Menu';
+import MySelf from './MySelf';
+import Header from './Header';
+import Footer from './Footer';
+import History from './History';
+import Sidenav from './Sidenav';
+import Jumbotron from './Jumbotron';
+import { CardProject } from './Cards';
+import { ButtonSocial } from './Buttons';
 import { FlexContainer } from './FlexContainer';
 
 export {
   Menu,
-  Cards,
   MySelf,
   Footer,
   Header,
   History,
-  Buttons,
   Sidenav,
   Jumbotron,
+  CardProject,
+  ButtonSocial,
   FlexContainer,
 }

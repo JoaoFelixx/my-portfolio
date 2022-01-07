@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
-export const Head = styled.div(props => ({
-  gridArea: 'header',
-  textAlign: 'center',
-  alignItems: 'center',
-  ...props
-}))
+export const Head = styled.div`
+  grid-area: header;
+  text-align: center;
+  align-items: center;
+`;
 
-export const Title = styled.h1(props => ({
-  ...props
-}))
-
-export const Span = styled.span(props => ({
-  padding: '4px',
-  fontSize: '18px',
-  ...props
-}))
+export const Span = styled.span`
+  padding: 4px;
+  font-size: 18px;
+`;

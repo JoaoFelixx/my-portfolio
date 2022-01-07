@@ -22,7 +22,7 @@ import {
   PreferencesDiv,
 } from './style';
 
-export const Sidenav = () => {
+function Sidenav() {
   const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513997173668text=';
   const dispatch = useDispatch();
   const [style, setStyle] = useState({ width: '0' });
@@ -128,3 +128,5 @@ export const Sidenav = () => {
     </Nav>
   )
 }
+
+export default Sidenav;

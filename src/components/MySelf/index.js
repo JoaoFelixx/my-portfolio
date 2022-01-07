@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Buttons } from '../Buttons';
+import { ButtonSocial } from '../Buttons';
 import { Link } from 'react-router-dom';
 import { localizedStrings } from '../../constants';
 import {
@@ -9,12 +9,11 @@ import {
   Text,
 } from './style';
 
-export const MySelf = () => {
+function MySelf() {
 
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle, setStyleTitle] = useState({});
   const { theme } = useSelector(state => state);
-  const { ButtonSocial } = Buttons;
 
   useEffect(() => {
 
@@ -44,3 +43,5 @@ export const MySelf = () => {
     </CardMySelf>
   )
 }
+
+export default MySelf;

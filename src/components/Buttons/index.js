@@ -1,5 +1,5 @@
-import { ButtonSocial } from './ButtonSocial';
+import ButtonSocial from './ButtonSocial';
 
-export const Buttons = {
+export {
   ButtonSocial
 }

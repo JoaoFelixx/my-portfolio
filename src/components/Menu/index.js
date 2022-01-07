@@ -3,7 +3,7 @@ import { MenuOutlined } from '@ant-design/icons';
 import { StyledMenu } from "./style";
 import { toggleSideNav } from '../../store/actions';
 
-export const Menu = () => {
+function Menu() {
   const dispatch = useDispatch(); 
   const { sidenavIsOpen } = useSelector(state => state);
 
@@ -24,3 +24,5 @@ export const Menu = () => {
     </div>
   )
 }
+
+export default Menu;
