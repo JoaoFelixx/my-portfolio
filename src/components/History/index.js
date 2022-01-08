@@ -15,12 +15,12 @@ function History() {
 
   useEffect(() => {
     if (theme === 'white') {
-      setColorContent({ backgroundColor: '#fff', color: '#000000' });
+      setColorContent({ backgroundColor: 'rgb(255,255,255,0.5)', color: '#000000' });
       setColorTitle({ color: '#000000' });
       return;
     } 
 
-    setColorContent({ backgroundColor: '#4F4F4F', color: '#fff' });
+    setColorContent({ backgroundColor: 'rgb(0,0,0,0.5)', color: '#fff' });
     setColorTitle({ color: '#fff' }); 
   }, [theme])
 

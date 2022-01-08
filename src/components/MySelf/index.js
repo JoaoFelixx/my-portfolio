@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { ButtonSocial } from '../Buttons';
+import { Button } from '../Buttons';
 import { Link } from 'react-router-dom';
 import { localizedStrings } from '../../constants';
 import {
@@ -18,12 +18,12 @@ function MySelf() {
   useEffect(() => {
 
     if (theme === 'white') {
-      setStyleContent({ backgroundColor: '#fff', color: '#000000' });
+      setStyleContent({ backgroundColor: 'rgb(255,255,255,0.5)', color: '#000000' });
       setStyleTitle({color: '#000000'});
       return 
     }
 
-    setStyleContent({ backgroundColor: '#4F4F4F', color: '#fff' });
+    setStyleContent({ backgroundColor: 'rgb(0,0,0,0.5)', color: '#fff' });
     setStyleTitle({color: '#fff'});
 
   }, [theme])
@@ -37,7 +37,7 @@ function MySelf() {
         <Text> { localizedStrings.currently } </Text>
         
         <Link to='/projects'> 
-          <ButtonSocial text={localizedStrings.clickHere} />  
+          <Button text={localizedStrings.clickHere} />  
         </Link>
       </Content>
     </CardMySelf>

@@ -1,5 +1,5 @@
-import ButtonSocial from './ButtonSocial';
+import Button from './Button';
 
 export {
-  ButtonSocial
+  Button
 }

@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { localizedStrings } from '../../constants';
 import { useSelector } from 'react-redux';
 import {
-  FlexContainer,
-  Jumbotron,
-  Sidenav,
-  Header,
-  Footer,
-  CardProject,
   Menu,
+  Footer,
+  Header,
+  Sidenav,
+  Jumbotron,
+  CardProject,
+  FlexContainer,
 } from '../../components';
 
  function Project() {
