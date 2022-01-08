@@ -1,25 +1,21 @@
 import {
   Menu,
-  Header,
   Footer,
   MySelf,
   Sidenav,
   History,
+  Presentation,
 } from '../../components';
-import { localizedStrings } from '../../constants';
-import { GridAreas } from './style';
 
 function Home() {
   return (
     <div>
       <Menu />
-      <GridAreas>
-        <Header title={localizedStrings.myPortfolio} subTitle={localizedStrings.welcome} />
-        <Sidenav />
-        <History />
-        <MySelf />
-        <Footer />
-      </GridAreas>
+      <Sidenav />
+      <Presentation />
+      <MySelf />
+      <History />
+     <Footer />
     </div>
   )
 }

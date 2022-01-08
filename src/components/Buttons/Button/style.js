@@ -7,4 +7,5 @@ export const StyledButton = styled.button`
   text-align:  center;
   border: none;
   cursor: pointer;
+  font-size: 20px;
 `;

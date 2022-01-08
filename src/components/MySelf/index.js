@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Button } from '../Buttons';
-import { Link } from 'react-router-dom';
 import { localizedStrings } from '../../constants';
 import {
   CardMySelf,
   Content,
+  Image,
   Text,
 } from './style';
+import { FlexContainer } from '../FlexContainer';
 
 function MySelf() {
 
@@ -19,27 +19,31 @@ function MySelf() {
 
     if (theme === 'white') {
       setStyleContent({ backgroundColor: 'rgb(255,255,255,0.5)', color: '#000000' });
-      setStyleTitle({color: '#000000'});
-      return 
+      setStyleTitle({ color: '#000000' });
+      return
     }
 
     setStyleContent({ backgroundColor: 'rgb(0,0,0,0.5)', color: '#fff' });
-    setStyleTitle({color: '#fff'});
+    setStyleTitle({ color: '#fff' });
 
   }, [theme])
 
   return (
     <CardMySelf id="myself" style={styleContent}>
-      <Content>
-        <h1 style={styleTitle}> { localizedStrings.myName } </h1>
+      <FlexContainer>
+        <Content style={{padding: '16px'}}>
+          <h1 style={styleTitle}> {localizedStrings.myName} </h1>
+
+          <Text> {localizedStrings.ITStudent} <span> {localizedStrings.startedOnProgramming} </span></Text>
+          <Text> {localizedStrings.currently} </Text>
+
+          
+        </Content>
+        <Content style={{width: '40%'}}>
+          <Image src='./favicon.png' alt='Félix Developer' />
+        </Content>
         
-        <Text> { localizedStrings.ITStudent } <span> { localizedStrings.startedOnProgramming } </span></Text>
-        <Text> { localizedStrings.currently } </Text>
-        
-        <Link to='/projects'> 
-          <Button text={localizedStrings.clickHere} />  
-        </Link>
-      </Content>
+      </FlexContainer>
     </CardMySelf>
   )
 }
