@@ -4,7 +4,7 @@ const xpTime = currentYear - 2019;
 
 const mySelf = {
   clickHere: 'Clique aqui',
-  currently: `No momento presente ${currentYear}, tenho ${myYearsOld} anos, eu já desenvolvi projetos: Front-End, Back-End e monopólios. Atuei como freelancer (de forma informal). Hoje tenho ${ xpTime } anos de experiência na área de desenvolvimento web, sou técnico em informática para internet pela ETEC. Trabalho bem em equipe e sou dedicado.`,
+  currently: `No momento presente ${currentYear}, tenho ${myYearsOld} anos de experiência com desenvolvimento web, sou técnico em informática para internet formado pela ETEC Guilhermina (Praia Grande). Tenho boa comunicação e pró-ativo. Desenvolvi diversos projetos que estão em exposição no github.`,
   myName: "João Carlos Félix",
   startedOnProgramming: '04/02/2019',
   ITStudent: 'Estudante de programação desde ',

@@ -22,6 +22,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
+  text-align: center;
   font-size: 50px;
   color: #ffffff;
 `; 

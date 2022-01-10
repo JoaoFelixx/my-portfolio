@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import { localizedStrings } from '../../constants';
 import {
   CardMySelf,
-  Content,
+  ContentText,
+  ContentImage,
   Image,
+  Title,
   Text,
 } from './style';
 import { FlexContainer } from '../FlexContainer';
@@ -31,18 +33,15 @@ function MySelf() {
   return (
     <CardMySelf id="myself" style={styleContent}>
       <FlexContainer>
-        <Content style={{padding: '16px'}}>
-          <h1 style={styleTitle}> {localizedStrings.myName} </h1>
+        <ContentText>
+          <Title style={styleTitle}> {localizedStrings.myName} </Title>
 
           <Text> {localizedStrings.ITStudent} <span> {localizedStrings.startedOnProgramming} </span></Text>
           <Text> {localizedStrings.currently} </Text>
-
-          
-        </Content>
-        <Content style={{width: '40%'}}>
-          <Image src='./favicon.png' alt='Félix Developer' />
-        </Content>
-        
+        </ContentText>
+        <ContentImage>
+          <Image src='./img/stacks.gif' alt='Félix Developer' loading="lazy"/>
+        </ContentImage>
       </FlexContainer>
     </CardMySelf>
   )
