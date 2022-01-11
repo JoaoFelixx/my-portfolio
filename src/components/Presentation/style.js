@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Body = styled.div`
   width: 100%;
-  height: 700px;
+  height: 100vh;
   background-color: rgb(0,0,0,0.7);
   background-attachment: fixed;
   background-position: center;
@@ -29,6 +29,7 @@ export const Title = styled.h1`
 
 export const Span = styled.span`
   font-size: 25px;
-  background-color: #777777;
+  padding: 10px;
+  background-color: #000000;
   color: #fff;
 `;

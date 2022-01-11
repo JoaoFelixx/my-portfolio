@@ -9,7 +9,7 @@ import {
   Title,
   Text,
 } from './style';
-import { FlexContainer } from '../FlexContainer';
+import FlexContainer from '../FlexContainer';
 
 function MySelf() {
 
@@ -40,7 +40,7 @@ function MySelf() {
           <Text> {localizedStrings.currently} </Text>
         </ContentText>
         <ContentImage>
-          <Image src='./img/stacks.gif' alt='Félix Developer' loading="lazy"/>
+          <Image src='./img/stacks.gif' alt='Félix Developer' loading="lazy" />
         </ContentImage>
       </FlexContainer>
     </CardMySelf>

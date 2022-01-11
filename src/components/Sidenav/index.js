@@ -41,7 +41,6 @@ function Sidenav() {
     const preference = { theme: isWhiteOrDarkTheme };
 
     dispatch(toggleTheme(preference));
-
   }
 
   const sendMessage = () => {

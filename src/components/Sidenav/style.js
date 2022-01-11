@@ -25,7 +25,8 @@ export const SideButtons = styled.button`
   display: block;
   transition: 0.3s;
   border: 1px solid rgb(34, 36, 37);
-  
+  cursor: pointer;
+
   &:hover {
     transition: 1s;
     background-color: #1878D1;
