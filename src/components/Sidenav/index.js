@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Switch, message } from 'antd';
+import { toast } from 'react-toastify';
+import { MUISwitch } from '@mui/material';
 import { localizedStrings } from '../../constants';
 import {
   HomeOutlined,
@@ -52,7 +53,7 @@ function Sidenav() {
     if (hour >= 12 && hour < 18)
       return window.location.assign(API_WHATS_APP + localizedStrings.goodAfternoon);
 
-    message.error(localizedStrings.outOfOfficeHours);
+    toast.error(localizedStrings.outOfOfficeHours);
   }
 
   useEffect(() => {
@@ -110,7 +111,7 @@ function Sidenav() {
 
       <PreferencesDiv>
         <p style={{ fontSize: '20px', color: 'white' }}>{localizedStrings.defineTheme} </p>
-        <Switch
+        <MUISwitch
           style={{ width: '90px', height: '22px' }}
           checkedChildren={localizedStrings.default}
           unCheckedChildren={localizedStrings.dark}
