@@ -1,5 +1,7 @@
 import Button from './Button';
+import SwitchButton from './SwitchButton';
 
 export {
-  Button
+  Button,
+  SwitchButton,
 }

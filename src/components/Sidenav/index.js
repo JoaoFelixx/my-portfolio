@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
-import { MUISwitch } from '@mui/material';
 import { localizedStrings } from '../../constants';
 import {
   HomeOutlined,
@@ -22,6 +21,7 @@ import {
   SideButtons,
   PreferencesDiv,
 } from './style';
+import { SwitchButton } from '../Buttons'
 
 function Sidenav() {
   const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513997173668text=';
@@ -111,14 +111,13 @@ function Sidenav() {
 
       <PreferencesDiv>
         <p style={{ fontSize: '20px', color: 'white' }}>{localizedStrings.defineTheme} </p>
-        <MUISwitch
-          style={{ width: '90px', height: '22px' }}
+
+        <SwitchButton
           checkedChildren={localizedStrings.default}
           unCheckedChildren={localizedStrings.dark}
           onClick={() => changeTheme()}
-          defaultChecked={theme === 'white' ? true : false} />
+          defaultChecked={theme === 'white' ? false : true} />
       </PreferencesDiv>
-
     </Nav>
   )
 }
