@@ -1,22 +1,21 @@
 import styled from 'styled-components'
 
 export const Nav = styled.div`
-  height: 100%;
-  width: 0;
   position: fixed;
+  width: 0;
+  height: 100%;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: rgb(0,0,0,0.8);
   overflow-X: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  opacity: 0.8;
 `;
 
 export const SideButtons = styled.button`
   width: 100%;
-  background-color: #000000;
+  background-color: rgb(0,0,0,0.1);
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   text-align: left;  

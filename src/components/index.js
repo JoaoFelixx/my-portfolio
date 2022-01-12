@@ -1,4 +1,5 @@
 import Menu from './Menu';
+import Body from './Body';
 import MySelf from './MySelf';
 import Footer from './Footer';
 import Header from './Header';
@@ -12,6 +13,7 @@ import { CardProject } from './Cards';
 
 export {
   Menu,
+  Body,
   MySelf,
   Footer,
   Header,

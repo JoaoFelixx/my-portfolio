@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   CardHistory,
   Content,
+  Title,
   Text,
 } from './style';
 
@@ -27,7 +28,7 @@ function History() {
   return (
     <CardHistory id="history" style={colorContent}>
       <Content>
-        <h1 style={colorTitle}> {localizedStrings.historyWithIT} </h1>
+        <Title style={colorTitle}> {localizedStrings.historyWithIT} </Title>
         <Text> {localizedStrings.historyWithITContent} </Text>
       </Content>
     </CardHistory>

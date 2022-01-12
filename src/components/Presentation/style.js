@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 export const Body = styled.div`
-  width: 100%;
+  width: auto;
   height: 100vh;
   background-color: rgb(0,0,0,0.7);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +19,7 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
+  font-weight: normal;
   font-size: 50px;
   color: #ffffff;
 `; 

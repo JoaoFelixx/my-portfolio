@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 
 export const CardMySelf = styled.div`
-  background-color: #777777;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   margin: 10px;
   padding: 5px;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
@@ -30,7 +25,6 @@ export const ContentImage = styled.div`
   }
 `;
 
-
 export const Image = styled.img`
   width: 100%;
   border: 5px solid #fff;
@@ -45,5 +39,5 @@ export const Text = styled.p`
 `;
 
 export const Title = styled.h1`
-  font-size: 40px;
+  font-weight: normal;
 `;

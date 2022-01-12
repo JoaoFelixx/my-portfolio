@@ -5,7 +5,6 @@ export const Project = styled.div`
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
-  overflow: hidden;
   border: 1px solid #000000;
   margin: 8px;
   -moz-transition: all 0.3s;
@@ -13,7 +12,7 @@ export const Project = styled.div`
   transition: all 0.3s;
   
   @media (max-width: 820px) { 
-    margin: 0;
+    width: 94%;
     padding: 4px; 
     margin-top: 8px;
     border-bottom-left-radius: 0;
