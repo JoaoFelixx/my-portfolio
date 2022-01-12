@@ -67,7 +67,7 @@ function Sidenav() {
     <Nav style={style}>
       <CloseButton onClick={() => closeSidenav()}> &times; </CloseButton>
 
-      <Link to='/' onClick={() => closeSidenav()}>
+      <Link style={{ textDecoration: 'none' }} to='/' onClick={() => closeSidenav()}>
         <SideButtons>
           <HomeOutlined />
           {" " + localizedStrings.home}
@@ -76,14 +76,14 @@ function Sidenav() {
       {
         location.pathname === '/' && (
           <div>
-            <a href='#history' onClick={() => closeSidenav()}>
+            <a style={{ textDecoration: 'none' }} href='#history' onClick={() => closeSidenav()}>
               <SideButtons>
                 <BookOutlined />
                 {" " + localizedStrings.history}
               </SideButtons>
             </a>
 
-            <a href='#myself' onClick={() => closeSidenav()}>
+            <a style={{ textDecoration: 'none' }} href='#myself' onClick={() => closeSidenav()}>
               <SideButtons>
                 <BulbOutlined />
                 {" " + localizedStrings.aboutMe}
@@ -92,13 +92,13 @@ function Sidenav() {
           </div>
         )
       }
-      <Link to='/projects' onClick={() => closeSidenav()}>
+      <Link style={{ textDecoration: 'none' }} to='/projects' onClick={() => closeSidenav()}>
         <SideButtons>
           <FundProjectionScreenOutlined />
           {" " + localizedStrings.projects}
         </SideButtons>
       </Link>
-      <a href='#Contact' onClick={() => closeSidenav()}>
+      <a style={{ textDecoration: 'none' }} href='#Contact' onClick={() => closeSidenav()}>
         <SideButtons >
           <LikeOutlined />
           {" " + localizedStrings.contact}
@@ -113,8 +113,6 @@ function Sidenav() {
         <p style={{ fontSize: '20px', color: 'white' }}>{localizedStrings.defineTheme} </p>
 
         <SwitchButton
-          checkedChildren={localizedStrings.default}
-          unCheckedChildren={localizedStrings.dark}
           onClick={() => changeTheme()}
           defaultChecked={theme === 'white' ? false : true} />
       </PreferencesDiv>

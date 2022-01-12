@@ -9,13 +9,13 @@ import {
 
 function Home() {
   return (
-    <div>
+    <div style={{ padding: '0', margin: '0' }}>
       <Menu />
       <Sidenav />
       <Presentation />
       <MySelf />
       <History />
-     <Footer />
+      <Footer />
     </div>
   )
 }

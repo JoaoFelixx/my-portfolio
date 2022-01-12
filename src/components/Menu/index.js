@@ -7,12 +7,7 @@ function Menu() {
   const dispatch = useDispatch(); 
   const { sidenavIsOpen } = useSelector(state => state);
 
-
-  const openSidenav = () => {
-    const preferences = { sidenavIsOpen: true };
-
-    dispatch(toggleSideNav(preferences));
-  }
+  const openSidenav = () => dispatch(toggleSideNav({ sidenavIsOpen: true }));
 
   return (
     <div>

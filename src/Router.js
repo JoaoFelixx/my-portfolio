@@ -1,13 +1,13 @@
 import React from "react";
 import { 
-  BrowserRouter,
+  Route,  
   Routes,
-  Route   
+  BrowserRouter,
 } from "react-router-dom";
 import {
   HomePage,
   Projects,
-} from './pages'
+} from './pages';
 import { localizedStrings } from "./constants";
 
 function Router() {

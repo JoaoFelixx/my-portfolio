@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Foot = styled.footer`
+  width: auto;
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: center;
   text-align: center;
   background-color: rgb(0, 0, 0);
@@ -21,11 +21,6 @@ export const Link = styled.a`
     opacity: 0.7;
   }
   
-  @media (max-width: 920px) {
-    width: 20%;
-  }
-
-  @media (max-width: 360px) {
-    width: 30%;
-  }
+  @media (max-width: 920px) { width: 20%; }
+  @media (max-width: 360px) { width: 30%; }
 `;

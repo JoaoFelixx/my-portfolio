@@ -5,7 +5,6 @@ import { ToastContainer } from 'react-toastify';
 import store from './store';
 
 import "react-toastify/dist/ReactToastify.css";
-import 'antd/dist/antd.css';
 
 function App() {
   return (

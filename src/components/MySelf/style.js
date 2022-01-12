@@ -17,6 +17,7 @@ export const ContentText = styled.div`
 
   @media (max-width: 920px) {
     width: 100%;
+    padding: 4px;
   }
 `;
 

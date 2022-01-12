@@ -9,7 +9,6 @@ export const CardHistory = styled.div`
   margin: 10px;
   padding: 5px;  
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
-  grid-area: history;
 `;
 
 export const Content = styled.div`
