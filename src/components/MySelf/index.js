@@ -25,7 +25,7 @@ function MySelf() {
       return
     }
 
-    setStyleContent({ backgroundColor: 'rgb(0,0,0,0.5)', color: '#fff' });
+    setStyleContent({ backgroundColor: 'rgb(0,0,0,0.7)', color: '#fff' });
     setStyleTitle({ color: '#fff' });
 
   }, [theme])

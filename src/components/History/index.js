@@ -21,7 +21,7 @@ function History() {
       return;
     }
 
-    setColorContent({ backgroundColor: 'rgb(0,0,0,0.5)', color: '#fff' });
+    setColorContent({ backgroundColor: 'rgb(0,0,0,0.7)', color: '#fff' });
     setColorTitle({ color: '#fff' });
   }, [theme])
 

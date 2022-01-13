@@ -4,6 +4,10 @@ export const CardMySelf = styled.div`
   margin: 10px;
   padding: 5px;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
+
+  @media (max-width: 920px) {
+    padding: 16px;
+  }
 `;
 
 export const ContentText = styled.div`
@@ -12,7 +16,6 @@ export const ContentText = styled.div`
 
   @media (max-width: 920px) {
     width: 100%;
-    padding: 4px;
   }
 `;
 
@@ -21,17 +24,13 @@ export const ContentImage = styled.div`
   width: 30%;
 
   @media (max-width: 920px) {
-    width: 100%;
+    display: none;
   }
 `;
 
 export const Image = styled.img`
   width: 100%;
   border: 5px solid #fff;
-
-  @media (max-width: 920px) {
-    display: none;
-  }
 `;
 
 export const Text = styled.p`
@@ -39,5 +38,6 @@ export const Text = styled.p`
 `;
 
 export const Title = styled.h1`
+  font-size: 40px;
   font-weight: normal;
 `;

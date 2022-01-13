@@ -16,7 +16,7 @@ export const Image = styled.img`
 `;
 
 export const Text = styled.p`
-  font-size: 18px;
+  font-size: 22px;
 `;
 
 export const Title = styled.h1`
