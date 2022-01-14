@@ -37,7 +37,7 @@ function Project() {
         <br />
         <Sidenav />
 
-        <Jumbotron title='Projetos Front-End' />
+        <Jumbotron title={localizedStrings.frontProject} />
 
         <FlexContainer>
           <CardProject
@@ -103,7 +103,7 @@ function Project() {
           />
         </FlexContainer>
 
-        <Jumbotron title='Projetos Back-end' />
+        <Jumbotron title={localizedStrings.backProject} />
 
         <FlexContainer>
           <CardProject
@@ -172,10 +172,10 @@ function Project() {
         <FlexContainer>
           <CardProject
             src='./img/socket.jpg'
-            alt='Sistema de comunicação por socket'
-            text='Sistema de comunicação Socket.io para comunicação em tempo real'
+            alt='Sistema de comunicação socket'
+            text={localizedStrings.content.serverSocket}
             link='https://github.com/JoaoFelixx/socket.io-server'
-            title='Server Socket'
+            title={localizedStrings.title.serverSocket}
             styleTitle={styleTitle}
             styleContent={styleContent}
           />
@@ -183,9 +183,9 @@ function Project() {
           <CardProject
             src='./img/login-back.jpg'
             alt='Sistema de Login NodeJS'
-            text='Sistema de login com NOde'
+            text={localizedStrings.content.backendLogin}
             link='https://github.com/JoaoFelixx/api-authentication-login'
-            title='Sistema de Login backEnd'
+            title={localizedStrings.title.backendLogin}
             styleTitle={styleTitle}
             styleContent={styleContent}
           />
@@ -193,15 +193,15 @@ function Project() {
           <CardProject
             src='./img/social-network-api.jpg'
             alt='Api rede social'
-            text='Api com sistema de comunicação socket'
+            text={localizedStrings.content.serverSocketAuth}
             link='https://github.com/JoaoFelixx/api-with-typescript'
-            title='Social network api'
+            title={localizedStrings.title.serverSocketAuth}
             styleTitle={styleTitle}
             styleContent={styleContent}
           />
         </FlexContainer>
 
-        <Jumbotron title='Projetos Monopólios' />
+        <Jumbotron title={localizedStrings.monoProject} />
 
         <FlexContainer>
           <CardProject

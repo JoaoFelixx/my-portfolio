@@ -6,6 +6,8 @@ import History from './History'
 import SideNav from './SideNav'
 import Projects from './Projects'
 import Jumbotron from './Jumbotron'
+import Presentation from './Presentation'
+
 const pt = {
   ...Header,
   ...MySelf,
@@ -15,6 +17,7 @@ const pt = {
   ...SideNav,
   ...Projects,
   ...Jumbotron,
+  ...Presentation,
 }
 
 export default pt

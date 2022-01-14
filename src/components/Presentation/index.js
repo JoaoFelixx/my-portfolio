@@ -1,3 +1,4 @@
+import { localizedStrings } from '../../constants';
 import {
   Body, 
   Span,
@@ -9,8 +10,8 @@ function Presentation() {
   return (
     <Body>
       <Content>
-        <Title>Félix Developer</Title>
-        <Span>Full Stack Developer</Span>
+        <Title> {localizedStrings.felixDeveloper} </Title>
+        <Span> {localizedStrings.fullStackDeveloper} </Span>
       </Content>
     </Body>
   )
