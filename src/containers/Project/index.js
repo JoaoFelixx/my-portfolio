@@ -11,7 +11,7 @@ import {
   FlexContainer,
 } from '../../components';
 
- function Project() {
+function Project() {
 
   const [styleContent, setStyleContent] = useState({});
   const [styleTitle, setStyleTitle] = useState({});
@@ -37,7 +37,7 @@ import {
         <br />
         <Sidenav />
 
-        <Jumbotron title='Projetos Front-End'/>
+        <Jumbotron title='Projetos Front-End' />
 
         <FlexContainer>
           <CardProject
@@ -70,8 +70,8 @@ import {
             styleContent={styleContent}
           />
         </FlexContainer>
-        
-        <FlexContainer> 
+
+        <FlexContainer>
           <CardProject
             src='./img/next.jpg'
             alt='Projeto Next'
@@ -103,7 +103,7 @@ import {
           />
         </FlexContainer>
 
-        <Jumbotron title='Projetos Back-end'/>
+        <Jumbotron title='Projetos Back-end' />
 
         <FlexContainer>
           <CardProject
@@ -115,7 +115,7 @@ import {
             styleTitle={styleTitle}
             styleContent={styleContent}
           />
-        
+
           <CardProject
             src='./img/serverjs.jpg'
             alt='Api Rest com express e JS'
@@ -169,7 +169,39 @@ import {
           />
         </FlexContainer>
 
-        <Jumbotron title='Projetos Monopólios'/>
+        <FlexContainer>
+          <CardProject
+            src='./img/socket.jpg'
+            alt='Sistema de comunicação por socket'
+            text='Sistema de comunicação Socket.io para comunicação em tempo real'
+            link='https://github.com/JoaoFelixx/socket.io-server'
+            title='Server Socket'
+            styleTitle={styleTitle}
+            styleContent={styleContent}
+          />
+
+          <CardProject
+            src='./img/login-back.jpg'
+            alt='Sistema de Login NodeJS'
+            text='Sistema de login com NOde'
+            link='https://github.com/JoaoFelixx/api-authentication-login'
+            title='Sistema de Login backEnd'
+            styleTitle={styleTitle}
+            styleContent={styleContent}
+          />
+
+          <CardProject
+            src='./img/social-network-api.jpg'
+            alt='Api rede social'
+            text='Api com sistema de comunicação socket'
+            link='https://github.com/JoaoFelixx/api-with-typescript'
+            title='Social network api'
+            styleTitle={styleTitle}
+            styleContent={styleContent}
+          />
+        </FlexContainer>
+
+        <Jumbotron title='Projetos Monopólios' />
 
         <FlexContainer>
           <CardProject
