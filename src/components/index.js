@@ -8,7 +8,6 @@ import Sidenav from './Sidenav';
 import Jumbotron from './Jumbotron';
 import Presentation from './Presentation';
 import FlexContainer from './FlexContainer';
-import { Button } from './Buttons';
 import { CardProject } from './Cards';
 
 export {
@@ -17,7 +16,6 @@ export {
   MySelf,
   Footer,
   Header,
-  Button,
   History,
   Sidenav,
   Jumbotron,

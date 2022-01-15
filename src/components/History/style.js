@@ -11,10 +11,6 @@ export const Content = styled.div`
   font-size: 18px;
 `;
 
-export const Image = styled.img`
-  width: 100%;
-`;
-
 export const Text = styled.p`
   font-size: 22px;
 `;

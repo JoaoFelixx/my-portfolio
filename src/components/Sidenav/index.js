@@ -113,8 +113,9 @@ function Sidenav() {
         <p style={{ fontSize: '20px', color: 'white' }}>{localizedStrings.defineTheme} </p>
 
         <SwitchButton
-          onClick={() => changeTheme()}
-          defaultChecked={theme === 'white' ? false : true} />
+          onClick={changeTheme}
+          value={theme}
+          defaultChecked={false} />
       </PreferencesDiv>
     </Nav>
   )

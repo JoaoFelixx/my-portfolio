@@ -15,14 +15,18 @@ function History() {
   const { theme } = useSelector(state => state);
 
   useEffect(() => {
-    if (theme === 'white') {
-      setColorContent({ backgroundColor: 'rgb(255,255,255,0.5)', color: '#000000' });
-      setColorTitle({ color: '#000000' });
-      return;
+    const whiteTheme = {
+      content: { backgroundColor: 'rgb(255,255,255,0.5)', color: '#000000' },
+      title: { color: '#000000' }
+    }
+    const darkTheme = {
+      content: { backgroundColor: 'rgb(0,0,0,0.7)', color: '#fff' },
+      title: { color: '#fff' }
     }
 
-    setColorContent({ backgroundColor: 'rgb(0,0,0,0.7)', color: '#fff' });
-    setColorTitle({ color: '#fff' });
+    setColorContent(theme === 'white' ? whiteTheme.content : darkTheme.content);
+    setColorTitle(theme === 'white' ? whiteTheme.title : darkTheme.title);
+
   }, [theme])
 
   return (

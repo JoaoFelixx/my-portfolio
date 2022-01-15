@@ -19,14 +19,18 @@ function Project() {
 
   useEffect(() => {
 
-    if (theme === 'white') {
-      setStyleContent({ backgroundColor: '#fff', color: '#000000' });
-      setStyleTitle({ color: '#000000' });
-      return
+    const whiteTheme = {
+      content: { backgroundColor: '#fff', color: '#000000' },
+      title: { color: '#000000' }
+    }
+    const darkTheme = {
+      content: { backgroundColor: '#4F4F4F', color: '#fff' },
+      title: { color: '#fff' }
     }
 
-    setStyleContent({ backgroundColor: '#4F4F4F', color: '#fff' });
-    setStyleTitle({ color: '#fff' });
+    setStyleContent(theme === 'white' ? whiteTheme.content : darkTheme.content);
+    setStyleTitle(theme === 'white' ? whiteTheme.title : darkTheme.title);
+
   }, [theme])
 
   return (
