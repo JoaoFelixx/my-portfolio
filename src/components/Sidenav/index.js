@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { localizedStrings } from '../../constants';
@@ -17,16 +16,15 @@ import {
 } from '../../store/actions';
 import {
   Nav,
-  CloseButton,
-  SideButtons,
-  PreferencesDiv,
+  SideBtn,
+  CloseBtn,
+  Preferences,
 } from './style';
-import { SwitchButton } from '../Buttons'
+import { SwitchButton } from '../Buttons';
 
 function Sidenav() {
   const API_WHATS_APP = 'https://api.whatsapp.com/send?phone=+5513997173668text=';
   const dispatch = useDispatch();
-  const [style, setStyle] = useState({ width: '0' });
   const location = useLocation();
   const {
     theme,
@@ -56,67 +54,60 @@ function Sidenav() {
     toast.error(localizedStrings.outOfOfficeHours);
   }
 
-  useEffect(() => {
-    const width = sidenavIsOpen ? { width: '300px' } : { width: '0' };
-
-    setStyle(width);
-
-  }, [sidenavIsOpen])
-
   return (
-    <Nav style={style}>
-      <CloseButton onClick={() => closeSidenav()}> &times; </CloseButton>
+    <Nav sidenavIsOpen={sidenavIsOpen}>
+      <CloseBtn onClick={() => closeSidenav()}> &times; </CloseBtn>
 
       <Link style={{ textDecoration: 'none' }} to='/' onClick={() => closeSidenav()}>
-        <SideButtons>
+        <SideBtn>
           <HomeOutlined />
           {" " + localizedStrings.home}
-        </SideButtons>
+        </SideBtn>
       </Link>
       {
         location.pathname === '/' && (
           <div>
             <a style={{ textDecoration: 'none' }} href='#history' onClick={() => closeSidenav()}>
-              <SideButtons>
+              <SideBtn>
                 <BookOutlined />
                 {" " + localizedStrings.history}
-              </SideButtons>
+              </SideBtn>
             </a>
 
             <a style={{ textDecoration: 'none' }} href='#myself' onClick={() => closeSidenav()}>
-              <SideButtons>
+              <SideBtn>
                 <BulbOutlined />
                 {" " + localizedStrings.aboutMe}
-              </SideButtons>
+              </SideBtn>
             </a>
           </div>
         )
       }
       <Link style={{ textDecoration: 'none' }} to='/projects' onClick={() => closeSidenav()}>
-        <SideButtons>
+        <SideBtn>
           <FundProjectionScreenOutlined />
           {" " + localizedStrings.projects}
-        </SideButtons>
+        </SideBtn>
       </Link>
       <a style={{ textDecoration: 'none' }} href='#Contact' onClick={() => closeSidenav()}>
-        <SideButtons >
+        <SideBtn >
           <LikeOutlined />
           {" " + localizedStrings.contact}
-        </SideButtons>
+        </SideBtn>
       </a>
-      <SideButtons onClick={() => sendMessage()}>
+      <SideBtn onClick={() => sendMessage()}>
         <LaptopOutlined />
         {" " + localizedStrings.wantAWebSite}
-      </SideButtons>
+      </SideBtn>
 
-      <PreferencesDiv>
+      <Preferences>
         <p style={{ fontSize: '20px', color: 'white' }}>{localizedStrings.defineTheme} </p>
 
         <SwitchButton
           onClick={changeTheme}
           value={theme}
           defaultChecked={false} />
-      </PreferencesDiv>
+      </Preferences>
     </Nav>
   )
 }

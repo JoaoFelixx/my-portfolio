@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import { localizedStrings } from '../../constants';
-import { useSelector } from 'react-redux';
 import {
   Menu,
   Footer,
@@ -12,27 +10,6 @@ import {
 } from '../../components';
 
 function Project() {
-
-  const [styleContent, setStyleContent] = useState({});
-  const [styleTitle, setStyleTitle] = useState({});
-  const { theme } = useSelector(state => state);
-
-  useEffect(() => {
-
-    const whiteTheme = {
-      content: { backgroundColor: '#fff', color: '#000000' },
-      title: { color: '#000000' }
-    }
-    const darkTheme = {
-      content: { backgroundColor: '#4F4F4F', color: '#fff' },
-      title: { color: '#fff' }
-    }
-
-    setStyleContent(theme === 'white' ? whiteTheme.content : darkTheme.content);
-    setStyleTitle(theme === 'white' ? whiteTheme.title : darkTheme.title);
-
-  }, [theme])
-
   return (
     <div>
       <Menu />
@@ -50,8 +27,6 @@ function Project() {
             text={localizedStrings.content.quiz}
             link='https://joaofelixx.github.io/app_quiz/'
             title={localizedStrings.title.quiz}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -60,8 +35,6 @@ function Project() {
             text={localizedStrings.content.dashboard}
             link='https://joaofelixx.github.io/dashboard-programathor/'
             title={localizedStrings.title.dashboard}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -70,8 +43,6 @@ function Project() {
             text={localizedStrings.content.tese}
             link='https://joaofelixx.github.io/tesemobilidade/'
             title={localizedStrings.title.tese}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
         </FlexContainer>
 
@@ -82,8 +53,6 @@ function Project() {
             text={localizedStrings.content.next}
             link='https://joaofelixx.github.io/robot-chat/'
             title={localizedStrings.title.next}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -92,8 +61,6 @@ function Project() {
             text={localizedStrings.content.felixflix}
             link='https://felixflix.netlify.app'
             title={localizedStrings.title.felixflix}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -102,8 +69,32 @@ function Project() {
             text={localizedStrings.content.starWars}
             link='https://star-wars-api-info.netlify.app/'
             title={localizedStrings.title.starWars}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
+          />
+        </FlexContainer>
+
+        <FlexContainer>
+          <CardProject
+            src='./img/login-front.jpg'
+            alt='Sistema de Login Front End'
+            text={localizedStrings.content.frontEndLogin}
+            link='https://github.com/JoaoFelixx/front-authentication-login'
+            title={localizedStrings.title.frontEndLogin}
+          />
+
+          <CardProject
+            src='./img/mercado-privado.jpg'
+            alt='Mercado Privado'
+            text={localizedStrings.content.privateMarket}
+            link='https://mercadoprivado.netlify.app/'
+            title={localizedStrings.title.privateMarket}
+          />
+
+          <CardProject
+            src='./img/socket-client.jpg'
+            alt='Socket Client'
+            text={localizedStrings.content.clientSocket}
+            link='https://github.com/JoaoFelixx/socket.io-client'
+            title={localizedStrings.title.clientSocket}
           />
         </FlexContainer>
 
@@ -116,8 +107,6 @@ function Project() {
             text={localizedStrings.content.fsNode}
             link='https://github.com/JoaoFelixx/system-files-nodejs'
             title={localizedStrings.title.fsNode}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -126,8 +115,6 @@ function Project() {
             text={localizedStrings.content.apiJsExpress}
             link='https://github.com/JoaoFelixx/test-FullstackJSJunior'
             title={localizedStrings.title.apiJsExpress}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -136,8 +123,6 @@ function Project() {
             text={localizedStrings.content.apiTsExpress}
             link='https://github.com/JoaoFelixx/api-with-typescript'
             title={localizedStrings.title.apiTsExpress}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
         </FlexContainer>
 
@@ -148,8 +133,6 @@ function Project() {
             text={localizedStrings.content.api}
             link='https://github.com/JoaoFelixx/API-nodeJS'
             title={localizedStrings.title.api}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -158,8 +141,6 @@ function Project() {
             text={localizedStrings.content.apiJSMysql}
             link='https://github.com/JoaoFelixx/api-restful-JS'
             title={localizedStrings.title.apiJSMysql}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -168,8 +149,6 @@ function Project() {
             text={localizedStrings.content.apiTSMysql}
             link='https://github.com/JoaoFelixx/product_sales'
             title={localizedStrings.title.apiTSMysql}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
         </FlexContainer>
 
@@ -180,8 +159,6 @@ function Project() {
             text={localizedStrings.content.serverSocket}
             link='https://github.com/JoaoFelixx/socket.io-server'
             title={localizedStrings.title.serverSocket}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -190,8 +167,6 @@ function Project() {
             text={localizedStrings.content.backendLogin}
             link='https://github.com/JoaoFelixx/api-authentication-login'
             title={localizedStrings.title.backendLogin}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -200,8 +175,6 @@ function Project() {
             text={localizedStrings.content.serverSocketAuth}
             link='https://github.com/JoaoFelixx/api-with-typescript'
             title={localizedStrings.title.serverSocketAuth}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
         </FlexContainer>
 
@@ -214,8 +187,6 @@ function Project() {
             text={localizedStrings.content.loginSimulator}
             link='https://joaofelixx.github.io/back-end_simulator_with_js/'
             title={localizedStrings.title.loginSimulator}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -224,8 +195,6 @@ function Project() {
             text={localizedStrings.content.loginPHP}
             link='https://github.com/JoaoFelixx/login-system-php'
             title={localizedStrings.title.loginPHP}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
 
           <CardProject
@@ -234,8 +203,6 @@ function Project() {
             text={localizedStrings.content.customWare}
             link='https://github.com/JoaoFelixx/CutomWare-php-simulator-ecommerce'
             title={localizedStrings.title.customWare}
-            styleTitle={styleTitle}
-            styleContent={styleContent}
           />
         </FlexContainer>
         <Footer />

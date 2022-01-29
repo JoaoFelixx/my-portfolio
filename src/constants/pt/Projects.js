@@ -19,9 +19,12 @@ const Projects = {
     customWare: 'Custom Ware Co. (php).',
     loginSimulator: "Simulador de Login (JS).",
     loginPHP: 'Sistema de Login com PHP.',
-    backendLogin: 'Sistema de login Back-end',
+    backendLogin: 'Sistema de login Back End',
     serverSocket: 'Servidor de comunicação socket',
     serverSocketAuth: 'Servidor de comunicação com autenticação',
+    privateMarket: 'Mercado Privado',
+    frontEndLogin: 'Sistema de login Front End',
+    clientSocket: 'Client de comunicação socket',
   },
   content: {
     tese: "Projeto de sistema de ônibus responsivo feito com Bootstrap.",
@@ -42,6 +45,9 @@ const Projects = {
     backendLogin: 'Sistema nodeJS para autenticação de usuários com jsonwebtoken',
     serverSocket: 'Servidor de comunicação socket para conversa em real time',
     serverSocketAuth: 'Servidor de comunicação socket para usuários autenticados real time',
+    privateMarket: 'Projeto clone "Mercado Livre" descomplicando display Grid',
+    frontEndLogin: 'Sistema ReactJS de autenticação de usuários com jsonwebtoken',
+    clientSocket: 'Client de comunicação socket para conversa em real time',
   }
 }
 

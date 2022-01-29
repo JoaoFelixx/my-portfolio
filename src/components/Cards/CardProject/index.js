@@ -1,6 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { localizedStrings } from '../../../constants';
-import {  
+import {
   Link,
   Text,
   Title,
@@ -9,24 +10,23 @@ import {
   Project,
 } from './style';
 
-export const CardProject = ({ 
-  src, 
-  alt, 
+export const CardProject = ({
+  src,
+  alt,
   text,
   link,
   title,
-  styleTitle,
-  styleContent,
 }) => {
-  
+  const { theme } = useSelector(state => state)
+
   return (
-    <Project style={styleContent}>
+    <Project theme={theme} >
       <Image src={src} alt={alt} />
       <Content>
-        <Title style={styleTitle}>{ title }</Title>
-        <Text>{ text }</Text>
+        <Title theme={theme} >{title}</Title>
+        <Text>{text}</Text>
         <a href={link}>
-          <Link>{ localizedStrings.viewProject }</Link>        
+          <Link>{localizedStrings.viewProject}</Link>
         </a>
       </Content>
     </Project>

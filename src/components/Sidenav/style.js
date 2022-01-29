@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const Nav = styled.div`
+ const Nav = styled.div`
   position: fixed;
-  width: 0;
+  width: ${props => props.sidenavIsOpen ? '300px' : '0px' };
   height: 100%;
   z-index: 1;
   top: 0;
@@ -13,7 +13,7 @@ export const Nav = styled.div`
   padding-top: 60px;
 `;
 
-export const SideButtons = styled.button`
+ const SideBtn = styled.button`
   width: 100%;
   background-color: rgb(0,0,0,0.1);
   padding: 8px 8px 8px 32px;
@@ -34,13 +34,14 @@ export const SideButtons = styled.button`
   }
 `;
   
-export const CloseButton = styled.a`
+ const CloseBtn = styled.a`
   position: absolute;
   top: 0;
   right: 25px;
   margin-left: 50px;  
   color: white;
   font-size: 36px;
+
   &:hover {
     transition: 0.5s;
     color: red;
@@ -48,6 +49,13 @@ export const CloseButton = styled.a`
   }
 `;
 
-export const PreferencesDiv = styled.div`
+ const Preferences = styled.div`
   padding: 8px 8px 8px 32px;
 `;
+
+export {
+  Nav,
+  SideBtn,
+  CloseBtn,
+  Preferences,
+}

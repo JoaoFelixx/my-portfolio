@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Foot = styled.footer`
+const Foot = styled.footer`
   width: auto;
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@ export const Foot = styled.footer`
   border: 2px solid rgb(0, 0, 0);
 `;
 
-export const Link = styled.a`
+const Link = styled.a`
   padding: 20px;
   width: 10%;
   text-decoration: none;
@@ -24,3 +24,8 @@ export const Link = styled.a`
   @media (max-width: 920px) { width: 20%; }
   @media (max-width: 360px) { width: 30%; }
 `;
+
+export {
+  Foot,
+  Link,
+}

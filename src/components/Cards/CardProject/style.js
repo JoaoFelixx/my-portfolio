@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Project = styled.div`
+const Project = styled.div`
   width: 100%;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
   border-bottom-left-radius: 20px;
@@ -11,6 +11,9 @@ export const Project = styled.div`
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   
+  background-color: ${props => props.theme === 'white' ? '#fff' : '#4F4F4F'};
+  color: ${props => props.theme === 'white' ? '#000' : '#fff'};
+  
   @media (max-width: 820px) { 
     width: 94%;
     padding: 4px; 
@@ -20,11 +23,11 @@ export const Project = styled.div`
   }
 `;
 
-export const Content = styled.div`
+const Content = styled.div`
   padding: 10px;
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   width: 100%;
   max-width: 100%;
   -moz-transition: all 0.3s;
@@ -37,16 +40,17 @@ export const Image = styled.img`
   }
 `;
 
-export const Title = styled.h3`
+const Title = styled.h3`
   font-weight: bold;
   font-size: 20px;
+  color: ${props => props.theme === 'white' ? '#000' : '#fff'};
 `;
 
-export const Text = styled.p`
+const Text = styled.p`
   font-size: 18px;
 `;
 
-export const Link = styled.button`
+const Link = styled.button`
   width: 100%;
   height: 40px;
   background-color: #1878D1;
@@ -61,3 +65,12 @@ export const Link = styled.button`
     background-color: #1331E8;
   }    
 `;
+
+export {
+  Link,
+  Text,
+  Title,
+  Image,
+  Content,
+  Project,
+}

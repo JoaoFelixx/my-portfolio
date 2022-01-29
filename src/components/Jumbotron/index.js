@@ -1,10 +1,13 @@
-import { StyledJumbotron } from './style';
+import {
+  Jumbo,
+  Title,
+} from './style';
 
 function Jumbotron({ title }) {
   return (
-    <StyledJumbotron id="Project">
-      <h1 style={{ color: '#fff' }}> { title } </h1>
-    </StyledJumbotron>
+    <Jumbo id="Project">
+      <Title> {title} </Title>
+    </Jumbo>
   )
 }
 
