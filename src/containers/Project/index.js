@@ -6,8 +6,8 @@ import {
   Sidenav,
   Jumbotron,
   CardProject,
-  FlexContainer,
 } from '../../components';
+import { Flex } from './style';
 
 function Project() {
   return (
@@ -17,10 +17,9 @@ function Project() {
         <Header title={localizedStrings.myPortfolio} subTitle={localizedStrings.myProjects} />
         <br />
         <Sidenav />
+        <Flex>
+          <Jumbotron title={localizedStrings.frontProject} />
 
-        <Jumbotron title={localizedStrings.frontProject} />
-
-        <FlexContainer>
           <CardProject
             src='./img/quiz.jpg'
             alt='Jogo de Quiz desenvolvido com JS'
@@ -44,9 +43,7 @@ function Project() {
             link='https://joaofelixx.github.io/tesemobilidade/'
             title={localizedStrings.title.tese}
           />
-        </FlexContainer>
 
-        <FlexContainer>
           <CardProject
             src='./img/next.jpg'
             alt='Projeto Next'
@@ -70,9 +67,7 @@ function Project() {
             link='https://star-wars-api-info.netlify.app/'
             title={localizedStrings.title.starWars}
           />
-        </FlexContainer>
 
-        <FlexContainer>
           <CardProject
             src='./img/login-front.jpg'
             alt='Sistema de Login Front End'
@@ -96,11 +91,9 @@ function Project() {
             link='https://github.com/JoaoFelixx/socket.io-client'
             title={localizedStrings.title.clientSocket}
           />
-        </FlexContainer>
 
-        <Jumbotron title={localizedStrings.backProject} />
+          <Jumbotron title={localizedStrings.backProject} />
 
-        <FlexContainer>
           <CardProject
             src='./img/node.jpg'
             alt='NodeJS Fs(File System)'
@@ -124,9 +117,7 @@ function Project() {
             link='https://github.com/JoaoFelixx/api-with-typescript'
             title={localizedStrings.title.apiTsExpress}
           />
-        </FlexContainer>
 
-        <FlexContainer>
           <CardProject
             src='./img/server.jpg'
             alt='NodeJS - API'
@@ -150,9 +141,7 @@ function Project() {
             link='https://github.com/JoaoFelixx/product_sales'
             title={localizedStrings.title.apiTSMysql}
           />
-        </FlexContainer>
 
-        <FlexContainer>
           <CardProject
             src='./img/socket.jpg'
             alt='Sistema de comunicação socket'
@@ -176,11 +165,9 @@ function Project() {
             link='https://github.com/JoaoFelixx/api-with-typescript'
             title={localizedStrings.title.serverSocketAuth}
           />
-        </FlexContainer>
 
-        <Jumbotron title={localizedStrings.monoProject} />
+          <Jumbotron title={localizedStrings.monoProject} />
 
-        <FlexContainer>
           <CardProject
             src='./img/login.jpg'
             alt='Login System'
@@ -204,7 +191,8 @@ function Project() {
             link='https://github.com/JoaoFelixx/CutomWare-php-simulator-ecommerce'
             title={localizedStrings.title.customWare}
           />
-        </FlexContainer>
+        </Flex>
+        <br />
         <Footer />
       </div>
     </div>

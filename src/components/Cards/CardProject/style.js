@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Project = styled.div`
-  width: 100%;
+  width: 31%;
   box-shadow: inset 0 0 1em transparent, 0 0 1em rgb(0, 0, 0);
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;

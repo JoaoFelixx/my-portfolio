@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const Jumbo = styled.div`
+  width: 100%;
   padding: 16px;
   color: rgb(255,255,255);
   grid-area: jumbotron;
