@@ -106,7 +106,7 @@ function Project() {
             src='./img/serverjs.jpg'
             alt='Api Rest com express e JS'
             text={localizedStrings.content.apiJsExpress}
-            link='https://github.com/JoaoFelixx/test-FullstackJSJunior'
+            link='https://github.com/JoaoFelixx/api-restful-file-system'
             title={localizedStrings.title.apiJsExpress}
           />
 
@@ -146,7 +146,7 @@ function Project() {
             src='./img/socket.jpg'
             alt='Sistema de comunicação socket'
             text={localizedStrings.content.serverSocket}
-            link='https://github.com/JoaoFelixx/socket.io-server'
+            link='https://github.com/JoaoFelixx/socket-io-server'
             title={localizedStrings.title.serverSocket}
           />
 
