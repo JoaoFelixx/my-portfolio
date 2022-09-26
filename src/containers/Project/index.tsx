@@ -8,7 +8,21 @@ import {
   FlexContainer,
 } from 'components';
 import { Page } from '../style';
-import { localizedStrings } from '../../constants';
+import { localizedStrings } from 'constants/localizedStrings';
+import Php from 'assets/php.jpg';
+import Quiz from 'assets/quiz.jpg';
+import Login from 'assets/login.jpg';
+import Socket from 'assets/socket.jpg'
+import Ourtube from 'assets/ourtube.png';
+import MySqlJs from 'assets/mysqljs.jpg';
+import MySqlTs from 'assets/mysqlts.jpg';
+import StarWars from 'assets/starwars.jpg';
+import ServerTs from 'assets/serverts.jpg';
+import Felixflix from 'assets/felixflix.jpg';
+import LoginBack from 'assets/login-back.jpg';
+import CustomWare from 'assets/customware.jpg';
+import SocketClient from 'assets/socket-client.jpg';
+import PrivateMarket from 'assets/mercado-privado.jpg';
 
 function Project() {
   return (
@@ -16,10 +30,18 @@ function Project() {
       <Menu />
       <SideNav />
       <Header title={localizedStrings.myPortfolio} subTitle={localizedStrings.myProjects} />
-      <Jumbotron title={localizedStrings.frontProject} /><br/>
+      <Jumbotron title={localizedStrings.frontProject} /><br />
       <FlexContainer style={{ flexWrap: 'wrap' }}>
         <CardProject
-          src='./img/quiz.jpg'
+          src={Ourtube}
+          alt='Clone Youtube "Ourtube"'
+          text={localizedStrings.content.frontOurtube}
+          link='https://github.com/JoaoFelixx/ourtube-front'
+          title={localizedStrings.title.frontOurtube}
+        />
+
+        <CardProject
+          src={Quiz}
           alt='Jogo de Quiz desenvolvido com JS'
           text={localizedStrings.content.quiz}
           link='https://joaofelixx.github.io/app_quiz/'
@@ -27,31 +49,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/programathor.jpg'
-          alt='Programathor'
-          text={localizedStrings.content.dashboard}
-          link='https://joaofelixx.github.io/dashboard-programathor/'
-          title={localizedStrings.title.dashboard}
-        />
-
-        <CardProject
-          src='./img/tese.jpg'
-          alt='Tese Mobilidade Company'
-          text={localizedStrings.content.tese}
-          link='https://joaofelixx.github.io/tesemobilidade/'
-          title={localizedStrings.title.tese}
-        />
-
-        <CardProject
-          src='./img/next.jpg'
-          alt='Projeto Next'
-          text={localizedStrings.content.next}
-          link='https://joaofelixx.github.io/robot-chat/'
-          title={localizedStrings.title.next}
-        />
-
-        <CardProject
-          src='./img/felixflix.jpg'
+          src={Felixflix}
           alt='Felixflix'
           text={localizedStrings.content.felixflix}
           link='https://felixflix.netlify.app'
@@ -59,7 +57,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/starwars.jpg'
+          src={StarWars}
           alt='Star Wars'
           text={localizedStrings.content.starWars}
           link='https://star-wars-api-info.netlify.app/'
@@ -67,15 +65,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/login-front.jpg'
-          alt='Sistema de Login Front End'
-          text={localizedStrings.content.frontEndLogin}
-          link='https://github.com/JoaoFelixx/front-authentication-login'
-          title={localizedStrings.title.frontEndLogin}
-        />
-
-        <CardProject
-          src='./img/mercado-privado.jpg'
+          src={PrivateMarket}
           alt='Mercado Privado'
           text={localizedStrings.content.privateMarket}
           link='https://mercadoprivado.netlify.app/'
@@ -83,34 +73,27 @@ function Project() {
         />
 
         <CardProject
-          src='./img/socket-client.jpg'
+          src={SocketClient}
           alt='Socket Client'
           text={localizedStrings.content.clientSocket}
           link='https://github.com/JoaoFelixx/socket.io-client'
           title={localizedStrings.title.clientSocket}
         />
       </FlexContainer>
-      
-      <Jumbotron title={localizedStrings.backProject} /><br/>
+
+      <Jumbotron title={localizedStrings.backProject} /><br />
       <FlexContainer style={{ flexWrap: 'wrap' }}>
+
         <CardProject
-          src='./img/node.jpg'
-          alt='NodeJS Fs(File System)'
-          text={localizedStrings.content.fsNode}
-          link='https://github.com/JoaoFelixx/system-files-nodejs'
-          title={localizedStrings.title.fsNode}
+          src={Ourtube}
+          alt='Clone Youtube "Ourtube"'
+          text={localizedStrings.content.backOurtube}
+          link='https://github.com/JoaoFelixx/ourtube-back'
+          title={localizedStrings.title.backOurtube}
         />
 
         <CardProject
-          src='./img/serverjs.jpg'
-          alt='Api Rest com express e JS'
-          text={localizedStrings.content.apiJsExpress}
-          link='https://github.com/JoaoFelixx/api-restful-file-system'
-          title={localizedStrings.title.apiJsExpress}
-        />
-
-        <CardProject
-          src='./img/serverts.jpg'
+          src={ServerTs}
           alt='Api Rest com express e TS'
           text={localizedStrings.content.apiTsExpress}
           link='https://github.com/JoaoFelixx/api-with-typescript'
@@ -118,15 +101,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/server.jpg'
-          alt='NodeJS - API'
-          text={localizedStrings.content.api}
-          link='https://github.com/JoaoFelixx/API-nodeJS'
-          title={localizedStrings.title.api}
-        />
-
-        <CardProject
-          src='./img/mysqljs.jpg'
+          src={MySqlJs}
           alt='Api Rest JS com MySQL'
           text={localizedStrings.content.apiJSMysql}
           link='https://github.com/JoaoFelixx/api-restful-JS'
@@ -134,7 +109,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/mysqlts.jpg'
+          src={MySqlTs}
           alt='Api Rest TS com MySQL'
           text={localizedStrings.content.apiTSMysql}
           link='https://github.com/JoaoFelixx/product_sales'
@@ -142,7 +117,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/socket.jpg'
+          src={Socket}
           alt='Sistema de comunicação socket'
           text={localizedStrings.content.serverSocket}
           link='https://github.com/JoaoFelixx/socket-io-server'
@@ -150,26 +125,18 @@ function Project() {
         />
 
         <CardProject
-          src='./img/login-back.jpg'
+          src={LoginBack}
           alt='Sistema de Login NodeJS'
           text={localizedStrings.content.backendLogin}
           link='https://github.com/JoaoFelixx/api-authentication-login'
           title={localizedStrings.title.backendLogin}
         />
-
-        <CardProject
-          src='./img/social-network-api.jpg'
-          alt='Api rede social'
-          text={localizedStrings.content.serverSocketAuth}
-          link='https://github.com/JoaoFelixx/api-with-typescript'
-          title={localizedStrings.title.serverSocketAuth}
-        />
       </FlexContainer>
-        
-      <Jumbotron title={localizedStrings.monoProject} /><br/>
+
+      <Jumbotron title={localizedStrings.monoProject} /><br />
       <FlexContainer>
         <CardProject
-          src='./img/login.jpg'
+          src={Login}
           alt='Login System'
           text={localizedStrings.content.loginSimulator}
           link='https://joaofelixx.github.io/back-end_simulator_with_js/'
@@ -177,7 +144,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/php.jpg'
+          src={Php}
           alt='Projetos desenvolvidos com php'
           text={localizedStrings.content.loginPHP}
           link='https://github.com/JoaoFelixx/login-system-php'
@@ -185,7 +152,7 @@ function Project() {
         />
 
         <CardProject
-          src='./img/customware.jpg'
+          src={CustomWare}
           alt='Custom Ware Company'
           text={localizedStrings.content.customWare}
           link='https://github.com/JoaoFelixx/CutomWare-php-simulator-ecommerce'
