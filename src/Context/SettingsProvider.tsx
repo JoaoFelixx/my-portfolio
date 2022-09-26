@@ -1,16 +1,15 @@
-import { 
-  useState, 
-  useEffect, 
+import {
+  useState,
   useContext,
-  useCallback, 
-  createContext, 
+  useCallback,
+  createContext,
 } from 'react';
 import { Provider, Settings } from 'interfaces';
 
 const defaultSettings: Settings = {
+  theme: 'white',
   language: 'pt',
   sideNavIsOpen: false,
-  theme: 'white',
 }
 
 const Context = createContext<Settings>(defaultSettings);
@@ -21,35 +20,11 @@ function SettingsProvider({ children }: Provider) {
 
   const [settings, setSettings] = useState<Settings>(defaultSettings);
 
-  const dispatch = useCallback((preference: Partial<Settings>) => {
-    try {
-      const settingsPreference: Settings = {
-        ...settings,
-        ...preference
-      }
-
-      setSettings(settingsPreference);
-
-    } catch (error) {
-      console.error(error)
-    }
-  }, [settings]) 
-
-  useEffect(() => {
-    if (settings.dispatch)
-      return
-
-    const settingsWithDispatch: Settings = {
-      ...settings,
-      dispatch,
-    }
-
-    setSettings(settingsWithDispatch);
-    
-  }, [dispatch, settings])
+  const dispatch = useCallback((preference: Partial<Settings>) =>
+    setSettings({ ...settings, ...preference }), [settings])
 
   return (
-    <Context.Provider value={settings}>
+    <Context.Provider value={{ ...settings, dispatch }}>
       {children}
     </Context.Provider>
   )
