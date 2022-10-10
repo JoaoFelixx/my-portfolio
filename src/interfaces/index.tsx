@@ -1,14 +1,25 @@
 import React from 'react';
+import { IconType } from 'react-icons';
 
-interface Settings {
+export interface Settings {
   theme: string;
   sideNavIsOpen: boolean;
   language: string;
-  dispatch?: React.Dispatch<Partial<this>>;
+  dispatch?: React.Dispatch<Partial<Omit<this, 'dispatch'>>>;
 }
 
-interface Provider {
+export interface Provider {
   children: React.ReactNode;
 }
 
-export type { Provider, Settings }
+export type SkillsCategory = 'front-end' | 'back-end' | 'DBs' | 'testing' | 'tools';
+
+export interface Skills {
+  skills: {
+    name: string;
+    color: string;
+    Icon: IconType;
+    category: SkillsCategory;
+    description: string;
+  }[];
+}
