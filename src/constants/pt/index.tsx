@@ -1,23 +1,7 @@
-import Header from './Header'
-import MySelf from './MySelf'
-import Router from './Router'
-import Contact from './Contact'
-import History from './History'
-import SideNav from './SideNav'
-import Projects from './Projects'
-import Jumbotron from './Jumbotron'
-import Presentation from './Presentation'
+import components from './components';
+import containers from './containers';
 
-const pt = {
-  ...Header,
-  ...MySelf,
-  ...Router,
-  ...Contact,
-  ...History,
-  ...SideNav,
-  ...Projects,
-  ...Jumbotron,
-  ...Presentation,
+export const pt = {
+  ...components,
+  ...containers,
 }
-
-export default pt
