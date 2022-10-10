@@ -59,7 +59,7 @@ const containers: Skills = {
     color: '#b3ff00',
     description: 'Biblioteca ReactJS',
     Icon: SiStyledcomponents,
-    name: 'Styled Comp.'
+    name: 'Styled'
   },{
     category: 'front-end',
     color: '#c300ff',
@@ -71,13 +71,13 @@ const containers: Skills = {
     color: '#095BF2',
     description: 'Ant Design',
     Icon: SiAntdesign,
-    name: 'Ant Design'
+    name: 'Ant D.'
   },{
     category: 'front-end',
     color: '#0059ff',
-    description: 'Biblioteca web',
+    description: 'Biblioteca ReactJS',
     Icon: SiMaterialui,
-    name: 'Material UI'
+    name: 'Material'
   },{
     category: 'front-end',
     color: '#000000',

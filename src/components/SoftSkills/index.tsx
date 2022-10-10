@@ -4,6 +4,7 @@ import {
   Flex,
   Item,
   Page,
+  Main,
   Title,
 } from './style';
 
@@ -31,6 +32,11 @@ export function SoftSkills({ skills }: Skills) {
 
   return (
     <Page>
+      <Main>
+        <h1>Skills</h1>
+        <span>Linguagens/Ferramentas/Bancos de dados que domino</span>
+      </Main><br/>
+
       <Title>Front-End</Title>
       <Flex>
         {React.Children.toArray(

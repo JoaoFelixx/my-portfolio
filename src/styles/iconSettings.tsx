@@ -1,7 +1,7 @@
 import { IconContext } from 'react-icons';
 
 export const iconSettings: IconContext = {
-  size: '2em',
+  size: '1.5em',
   color: '#FFF',
   className: "global-class-name",
 }
