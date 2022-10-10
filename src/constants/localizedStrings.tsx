@@ -1,6 +1,6 @@
 import LocalizedStrings from 'react-localization';
-import pt from './pt';
+import { pt } from './pt';
 
-const localizedStrings = new LocalizedStrings ({ pt });
+const localizedStrings = Object.freeze(new LocalizedStrings({ pt }));
 
 export { localizedStrings }
