@@ -1,28 +1,20 @@
-import { SettingsProvider } from 'Context/SettingsProvider';
-import { GlobalStyle } from 'styles';
+import { HomePage } from './pages';
 import { IconContext } from 'react-icons';
-import { ToastContainer } from 'react-toastify';
-import Routes from 'Router';
+import { SettingsProvider } from 'Context/SettingsProvider';
+import { SkillsProvider } from 'Context/SkillsProvider';
+import { GlobalStyle, iconSettings } from 'styles';
 
-function App() {
+function Application() {
   return (
     <SettingsProvider>
-      <GlobalStyle />
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={true}
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable
-        pauseOnHover />
-      <IconContext.Provider value={{ size: '28px', color: '#fff', className: "global-class-name" }} >
-        <Routes />
-      </IconContext.Provider>
+      <SkillsProvider>
+        <IconContext.Provider value={iconSettings} >
+          <GlobalStyle />
+          <HomePage />
+        </IconContext.Provider>
+      </SkillsProvider>
     </SettingsProvider>
   )
 }
 
-export default App;
+export default Application;
