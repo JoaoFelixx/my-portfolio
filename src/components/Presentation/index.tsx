@@ -1,7 +1,7 @@
-import { localizedStrings } from '../../constants';
+import { localizedStrings } from '../../constants/localizedStrings';
 import { Body, Span, Title, Content, } from './style';
 
-function Presentation() {
+export function Presentation() {
   return (
     <Body>
       <Content>
@@ -11,5 +11,3 @@ function Presentation() {
     </Body>
   )
 }
-
-export default Presentation;

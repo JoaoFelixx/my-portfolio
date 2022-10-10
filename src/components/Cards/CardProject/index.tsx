@@ -1,5 +1,5 @@
 import { useSelectorSettings } from 'Context/SettingsProvider';
-import { localizedStrings } from '../../../constants';
+import { localizedStrings } from '../../../constants/localizedStrings';
 import {
   Link,
   Text,
