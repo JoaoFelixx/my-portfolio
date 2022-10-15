@@ -17,9 +17,12 @@ interface SideProps {
 export function SideNav({ sideParams, sideNavIsOpen }: SideProps) {
   const { dispatch } = useSelectorSettings();
 
+  const closeSideNav = () => 
+    dispatch?.({ type: 'change-settings',payload: { sideNavIsOpen: false } })
+
   return (
     <Nav sideNavIsOpen={sideNavIsOpen}>
-      <CloseBtn onClick={() => dispatch?.({ sideNavIsOpen: false })}> &times; </CloseBtn>
+      <CloseBtn onClick={closeSideNav}> &times; </CloseBtn>
       {React.Children.toArray(
         sideParams.map(({ Icon, funcOnClick, text }) => {
           return (

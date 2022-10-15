@@ -1,11 +1,11 @@
 import React, { useMemo, useCallback } from 'react';
 import { environments } from 'constants/environments';
 import { localizedStrings } from 'constants/localizedStrings';
+import { useSelectorSkills } from 'Context/SkillsProvider';
 import { useSelectorSettings } from 'Context/SettingsProvider';
 import { FaHome, FaLaptopCode } from 'react-icons/fa';
 import { AiOutlineFundProjectionScreen, AiFillLike } from 'react-icons/ai';
 import { NavBar, SideNav, Presentation, Menu, SoftSkills, } from 'components';
-import { useSelectorSkills } from 'Context/SkillsProvider';
 
 type FunctionsType = 'closeSideNav' | 'sendMessage';
 
@@ -14,8 +14,8 @@ export function Home() {
   const { skills } = useSelectorSkills();
 
   const toolToFunctions = useCallback((type: FunctionsType) => ({
-    'closeSideNav': () => dispatch?.({ sideNavIsOpen: false }),
     'sendMessage': () => window.location.assign(environments.API_WHATS_APP),
+    'closeSideNav': () => dispatch?.({ type: 'change-settings', payload: { sideNavIsOpen: false } }),
   }[type]), [dispatch])
 
   const scrollTop = () => window.scrollTo(0, 0);

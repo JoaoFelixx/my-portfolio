@@ -9,12 +9,12 @@ export function Switch() {
 
     const preference = { theme: isWhiteOrDarkTheme };
 
-    dispatch?.(preference);    
+    dispatch?.({ type: 'change-settings', payload: preference });
   }
 
   return (
     <SwitchButton className="switch__container">
-      <input id="switch-shadow" className="switch switch--shadow" type="checkbox" onClick={changeTheme}/>
+      <input id="switch-shadow" className="switch switch--shadow" type="checkbox" onClick={changeTheme} />
       <label htmlFor="switch-shadow"></label>
     </SwitchButton>
   )

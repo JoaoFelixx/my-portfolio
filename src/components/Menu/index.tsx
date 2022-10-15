@@ -2,10 +2,15 @@ import { StyledMenu } from "./style";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useSelectorSettings } from "Context/SettingsProvider";
 
-function Menu() {
+export function Menu() {
   const { dispatch, sideNavIsOpen } = useSelectorSettings()
 
-  const openSideNav = () => dispatch?.({ sideNavIsOpen: true });
+  const openSideNav = () => dispatch?.({
+    type: 'change-settings',
+    payload: {
+      sideNavIsOpen: true
+    }
+  });
 
   return (
     <div>
@@ -17,5 +22,3 @@ function Menu() {
     </div>
   )
 }
-
-export default Menu;

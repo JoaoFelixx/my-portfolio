@@ -1,4 +1,4 @@
-import Menu from './Menu';
+import { Menu } from './Menu';
 import Footer from './Footer';
 import Header from './Header';
 import { NavBar } from './NavBar';

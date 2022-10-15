@@ -1,30 +1,29 @@
 import {
-  useState,
   useContext,
-  useCallback,
+  useReducer,
   createContext,
 } from 'react';
-import { Provider, Settings } from 'interfaces';
+import { Action, Provider, Settings } from 'interfaces';
 
-const defaultSettings: Settings = {
+const initialState: Settings = {
   theme: 'white',
   language: 'pt',
   sideNavIsOpen: false,
 }
 
-const Context = createContext<Settings>(defaultSettings);
+const Context = createContext<Settings>(initialState);
 
 const useSelectorSettings = (): Settings => useContext(Context);
 
+const reducer = (state: Settings, action: Action) => ({
+  'change-settings': { ...state, ...action.payload }
+}[action.type])
+
 function SettingsProvider({ children }: Provider) {
-
-  const [settings, setSettings] = useState<Settings>(defaultSettings);
-
-  const dispatch = useCallback((preference: Partial<Settings>) =>
-    setSettings({ ...settings, ...preference }), [settings])
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <Context.Provider value={{ ...settings, dispatch }}>
+    <Context.Provider value={{ ...state, dispatch }}>
       {children}
     </Context.Provider>
   )

@@ -1,11 +1,16 @@
 import React from 'react';
 import { IconType } from 'react-icons';
 
+export interface Action {
+  type: 'change-settings';
+  payload: Partial<Omit<Settings, 'dispatch'>>;
+}
+
 export interface Settings {
   theme: string;
   sideNavIsOpen: boolean;
   language: string;
-  dispatch?: React.Dispatch<Partial<Omit<this, 'dispatch'>>>;
+  dispatch?: React.Dispatch<Action>;
 }
 
 export interface Provider {
