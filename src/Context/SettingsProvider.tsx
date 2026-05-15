@@ -1,32 +1,49 @@
 import {
-  useContext,
-  useReducer,
   createContext,
-} from 'react';
-import { Action, Provider, Settings } from 'interfaces';
 
-const initialState: Settings = {
-  theme: 'white',
-  language: 'pt',
-  sideNavIsOpen: false,
+  useState,
+  useContext,
+} from 'react';
+
+
+type Theme = 'dark' | 'light';
+type Language = 'pt' | 'en';
+
+interface SettingsContextType {
+  theme: Theme;
+  language: Language;
+  toggleTheme: () => void;
+  setLanguage: (lang: Language) => void;
 }
 
-const Context = createContext<Settings>(initialState);
+interface SettingsProviderProps {
+  children: React.ReactNode
+}
 
-const useSelectorSettings = (): Settings => useContext(Context);
 
-const reducer = (state: Settings, action: Action) => ({
-  'change-settings': { ...state, ...action.payload }
-}[action.type])
+const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
 
-function SettingsProvider({ children }: Provider) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+
+export function SettingsProvider({ children }: SettingsProviderProps) {
+  const [theme, setTheme] = useState<Theme>('dark');
+  const [language, setLanguage] = useState<Language>('pt');
+
+  const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
 
   return (
-    <Context.Provider value={{ ...state, dispatch }}>
-      {children}
-    </Context.Provider>
-  )
+    <SettingsContext.Provider value={{ theme, language, toggleTheme, setLanguage }}>
+      <div className={theme}>
+        {children}
+      </div>
+    </SettingsContext.Provider>
+  );
 }
 
-export { SettingsProvider, useSelectorSettings };
+
+export function useSettings() {
+  const context = useContext(SettingsContext);
+  if (context === undefined) {
+    throw new Error('useSettings must be used within a SettingsProvider');
+  }
+  return context;
+}
